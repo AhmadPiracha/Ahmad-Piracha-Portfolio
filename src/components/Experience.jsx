@@ -21,7 +21,7 @@ const ExperienceCard = ({
   iconBg,
 }) => {
   // console.log(JSON.stringify(experiences));
-  console.log(title, company_name, points, date, icon, iconBg);
+  // console.log(title, company_name, points, date, icon, iconBg);
   return (
     <VerticalTimelineElement
       className="vertical-timeline-element--work"
