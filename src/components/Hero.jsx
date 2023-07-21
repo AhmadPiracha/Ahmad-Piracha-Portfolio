@@ -1,44 +1,49 @@
-import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas"
+import { resume } from "../assets";
 const Hero = () => {
   return (
     <>
-      <section className="relative w-full h-screen mx-auto">
+      <section className="relative w-full h-screen mx-auto flex items-center justify-center">
         <div
-          className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
+          className={`${styles.paddingX} max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start lg:gap-5 md:gap-5 sm:gap-2 lg:pt-20`}
         >
-          <div className="flex flex-col justify-center items-center mt-5">
-            <div className="w-5 h-5 rounded-full bg-[#915eff]" />
+          {/* Text container */}
+          <div className="order-2 lg:order-1 lg:w-1/2 lg:mt-5 lg:pr-5 text-center lg:text-left">
+            <div className="flex flex-col justify-center items-center lg:items-start"></div>
 
-            <div className="w-1 sm:h-80 h-40 violet-gradient" />
-          </div>
-          <div>
-            <h1 className={`${styles.heroHeadText} text-white `}>
-              Hi, I am <span className="text-[#915eff]">Ahmad</span>
+            <h1 className={`${styles.heroHeadText} text-white lg:mb-5`}>
+              Hi! its <span className="text-[#c6badf]">Ahmad</span>
             </h1>
             <p className={`${styles.heroSubText} text-white-100 mt-2`}>
-              I am a Software Engineer,
-              <br className="sm:block hidden" /> Web Developer and Designer.
+              A SOFTWARE ENGINEER
             </p>
+            <div className="mt-5 space-x-4">
+              <button className="bg-blue-500 hover:bg-white hover:text-blue-500 text-white font-bold py-2 px-4 rounded">
+                <a
+                  href={resume}
+                  download="Muhammad Ahmad Waseem Piracha-Resume"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Resume 📝
+                </a>
+              </button>
+              <button className="bg-white text-blue-500 font-bold py-2 px-4 rounded">
+                <a href="#contact">Contact Me</a>
+              </button>
+            </div>
           </div>
-        </div>
-        <ComputersCanvas />
-      
-        <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
-          <a href="#about">
-            <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
-              <motion.div
-                animate={{ y: [0, 24, 0] }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  repeatType: "loop",
-                }}
-                className="w-3 h-3 rounded-full bg-secondary mb-1"
+
+          {/* Image container */}
+          <div className="order-1 lg:order-2 lg:w-1/2 lg:mt-0 lg:ml-5 md:w-2/4 sm:w-4/5 sm:mx-auto rounded-full overflow-hidden">
+            <div className="aspect-w-1 aspect-h-1">
+              <img
+                className="object-cover object-center w-full h-full rounded-full max-w-sm sm:max-w-full"
+                src="/src/assets/HeroProfile.jpg"
+                alt="Ahmad Piracha Profile"
               />
             </div>
-          </a>
+          </div>
         </div>
       </section>
     </>

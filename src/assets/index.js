@@ -31,6 +31,8 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+import resume from "./company/Muhammad Ahmad Waseem Piracha-Resume.pdf"
+
 export {
   logo,
   logo1,
@@ -61,4 +63,5 @@ export {
   carrent,
   jobit,
   tripguide,
+  resume
 };
