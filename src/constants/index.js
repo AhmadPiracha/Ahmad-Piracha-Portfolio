@@ -1,8 +1,9 @@
 import {
-  mobile,
-  backend,
-  creator,
+  webDesign,
+  MaintenanceIcon,
+  debugging,
   web,
+  // webIcon,
   javascript,
   typescript,
   html,
@@ -28,7 +29,7 @@ import {
 export const navLinks = [
   {
     id: "about",
-    title: "About",
+    title: "About Me",
   },
   {
     id: "work",
@@ -42,20 +43,28 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Web Development",
     icon: web,
+    description:
+      " From front-end to back-end development, I bring your website ideas to life using the latest web technologies. I strive to deliver efficient, scalable, and secure solutions tailored to your specific requirements.",
   },
   {
-    title: "React Native Developer",
-    icon: mobile,
+    title: "Web Design",
+    icon: webDesign,
+    description:
+      "I craft modern, user-friendly websites that seamlessly blend functionality and stunning visuals, ensuring an engaging online experience for your visitors while reflecting the unique identity of your brand.",
   },
   {
-    title: "Backend Developer",
-    icon: backend,
+    title: "Maintenance",
+    icon: MaintenanceIcon,
+    description:
+      "I offer reliable website maintenance services to ensure your online presence remains up-to-date, secure, and optimized for optimal performance. Regular updates, bug fixes, and content management are seamlessly handled to keep your website running smoothly.",
   },
   {
-    title: "Content Creator",
-    icon: creator,
+    title: "Bug Fixing",
+    icon: debugging,
+    description:
+      "As a meticulous problem solver, I possess a deep understanding of various programming languages and frameworks, allowing me to efficiently identify and resolve software bugs, ensuring your applications run flawlessly and provide an exceptional user experience.",
   },
 ];
 

@@ -1,9 +1,10 @@
 import logo from "./logo.svg";
 import logo1 from "./logo1.svg";
-import backend from "./backend.png";
-import creator from "./creator.png";
-import mobile from "./mobile.png";
+import MaintenanceIcon from "./maintenance.png";
+import debugging from "./debugging.png";
+import webDesign from "./webDesign.png";
 import web from "./web.png";
+import webIcon from "./web-icon.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -36,10 +37,11 @@ import resume from "./company/Muhammad Ahmad Waseem Piracha-Resume.pdf"
 export {
   logo,
   logo1,
-  backend,
-  creator,
-  mobile,
+  MaintenanceIcon,
+  debugging,
+  webDesign,
   web,
+  webIcon,
   github,
   menu,
   close,
