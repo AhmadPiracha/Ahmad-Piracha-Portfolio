@@ -9,19 +9,12 @@ import "react-vertical-timeline-component/style.min.css";
 
 import { styles } from "../styles";
 import { experiences } from "../constants";
+import { education } from "../constants";
+
 import { SectionWrapper } from "../higherOrderComponents";
 import { textVariant } from "../utils/motion";
 
-const ExperienceCard = ({
-  title,
-  company_name,
-  points,
-  date,
-  icon,
-  iconBg,
-}) => {
-  // console.log(JSON.stringify(experiences));
-  // console.log(title, company_name, points, date, icon, iconBg);
+const SummaryCard = ({ title, company_name, points, date, icon, iconBg }) => {
   return (
     <VerticalTimelineElement
       className="vertical-timeline-element--work"
@@ -76,30 +69,40 @@ const ExperienceCard = ({
 const Experience = () => {
   return (
     <>
-      <motion.div 
-      variants={textVariant()}
-      >
-        <p className={styles.sectionSubText}>
-          What I have done so far in my career.
-        </p>
-        <h2 className={styles.sectionHeadText}>
-          Work Experience
-        </h2>
-      </motion.div>
+      <div>
+        <motion.div variants={textVariant()}>
+          {/* <p className={styles.sectionHeadText}>A summary of My Resume.</p> */}
+          <h2 className={styles.sectionSubText}>My Experience</h2>
+        </motion.div>
 
-      <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
-          {experiences.map((experience, index) => (
-            <ExperienceCard
-              key={index}
-              experience={experience}
-              {...experience}
-            />
-          ))}
-        </VerticalTimeline>
+        <div className="mt-10 flex flex-col">
+          <VerticalTimeline>
+            {experiences.map((experience, index) => (
+              <SummaryCard
+                key={index}
+                experience={experience}
+                {...experience}
+              />
+            ))}
+          </VerticalTimeline>
+        </div>
+      </div>
+      {/* EDUCATION */}
+      <div className="mt-5">
+        <motion.div variants={textVariant()}>
+          <h2 className={styles.sectionSubText}>My Education</h2>
+        </motion.div>
+
+        <div className="mt-10 flex flex-col">
+          <VerticalTimeline>
+            {education.map((education, index) => (
+              <SummaryCard key={index} education={education} {...education} />
+            ))}
+          </VerticalTimeline>
+        </div>
       </div>
     </>
   );
 };
 
-export default SectionWrapper(Experience, "experience");
+export default SectionWrapper(Experience, "work");
