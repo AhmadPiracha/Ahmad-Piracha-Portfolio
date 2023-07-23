@@ -28,11 +28,15 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import nuces from "./nuces.png";
+import internsPak from "./internsPak.jpeg";
 
-import resume from "./company/Muhammad Ahmad Waseem Piracha-Resume.pdf"
+import newsApp from "./newsApp.png";
+import covidscreeningapp from "./covid-screening-app.png";
+import textApp from "./textApp.png";
+import portfolio from "./portfolio.png";
+
+import resume from "./company/Muhammad Ahmad Waseem Piracha-Resume.pdf";
 
 export {
   logo,
@@ -62,8 +66,11 @@ export {
   shopify,
   starbucks,
   tesla,
-  carrent,
-  jobit,
-  tripguide,
-  resume
+  newsApp,
+  covidscreeningapp,
+  textApp,
+  portfolio,
+  resume,
+  nuces,
+  internsPak,
 };

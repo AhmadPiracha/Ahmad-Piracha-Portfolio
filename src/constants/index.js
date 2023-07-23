@@ -16,13 +16,16 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
+  // meta,
+  // starbucks,
+  // tesla,
+  // shopify,
+  nuces,
+  internsPak,
+  newsApp,
+  covidscreeningapp,
+  textApp,
+  portfolio,
   threejs,
 } from "../assets";
 
@@ -125,24 +128,11 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Frontend Developer Intern",
+    company_name: "Interns Pakistan ",
+    icon: internsPak,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Aug 2022- Sep 2022",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -150,30 +140,18 @@ const experiences = [
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
+];
+
+const education = [
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
+    title: "Computer Science",
+    company_name:
+      "National University of Computer and Emerging Sciences (FAST-NU)",
+    icon: nuces,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "2019 - 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "With a Bachelor of Science in Computer Science from the esteemed FAST-NUCES, I bring a strong foundation and innovation to deliver cutting-edge solutions for your next project.",
     ],
   },
 ];
@@ -207,58 +185,58 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "My Portfolio",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "A web-based platform that allows users to view my portfolio made using React and Tailwind CSS",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
       },
       {
         name: "tailwind",
         color: "pink-text-gradient",
       },
+      {
+        name: "motion-framer",
+        color: "green-text-gradient",
+      },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: portfolio,
+    source_code_link: "https://github.com/AhmadPiracha",
   },
   {
-    name: "Job IT",
+    name: "News App",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Web-based platform that allows users to watch news of their interest made using React and NewsAPI",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
+        name: "bootstrap",
         color: "pink-text-gradient",
       },
+      {
+        name: "newsapi",
+        color: "green-text-gradient",
+      },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: newsApp,
+    source_code_link: "https://github.com/AhmadPiracha/my-news-app",
   },
   {
-    name: "Trip Guide",
+    name: "Covid Screening Tool",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A web-based platform that allows users to screen themselves for COVID-19 symptoms and provides them with a risk assessment based on their responses.",
     tags: [
       {
-        name: "nextjs",
+        name: "javascript",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "bootstrap",
         color: "green-text-gradient",
       },
       {
@@ -266,9 +244,38 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: covidscreeningapp,
+    source_code_link:
+      "https://github.com/AhmadPiracha/Covid-Screening-Mobile-App",
+  },
+  {
+    name: "Text Analyzer tool",
+    description:
+      "A web-based platform that allows users to perform various text operations such as converting text to uppercase, removing extra spaces, etc.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "bootstrap",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: textApp,
+    source_code_link: "https://github.com/AhmadPiracha/text-analyzer-app",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export {
+  services,
+  technologies,
+  experiences,
+  education,
+  testimonials,
+  projects,
+};
