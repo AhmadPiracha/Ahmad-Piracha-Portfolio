@@ -30,7 +30,8 @@ const Navbar = () => {
             Ahmad Piracha
           </p>
         </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+
+        <ul className="list-none lg:flex hidden flex-row gap-6">
           {navLinks.map((link) => (
             <li
               key={link.id}
@@ -50,7 +51,7 @@ const Navbar = () => {
         </ul>
 
         {/* TOGGLE BUTTON AND MENU FOR MOBILE DEVICES */}
-        <div className="sm:hidden flex items-center">
+        <div className="lg:hidden flex items-center">
           <img
             src={toggle ? close : menu}
             alt="menu"
@@ -58,32 +59,41 @@ const Navbar = () => {
             onClick={toggleMenu}
           />
         </div>
-      </div>
 
-      {/* Side Menu */}
-      <div
-        className={`fixed top-0 right-0 h-screen w-80 bg-primary bg-opacity-90 z-50 transform transition-transform ${
-          toggle ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        <div className="flex justify-end items-center h-full">
-          <div className="w-full bg-primary p-4">
-            <ul className="list-none flex flex-col gap-4">
-              {navLinks.map((nav) => (
-                <li
-                  key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
-                  }`}
-                  onClick={() => {
-                    toggleMenu();
-                    setActive(nav.title);
-                  }}
-                >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
-                </li>
-              ))}
-            </ul>
+        {/* Side Menu */}
+        <div
+          className={`fixed top-0 right-0 h-screen w-full bg-primary bg-opacity-90 z-50 transform transition-transform ${
+            toggle ? "translate-x-0" : "translate-x-full"
+          } sm:block ${toggle ? "block" : "hidden"} lg:hidden`}
+        >
+          <div className="lg:hidden flex items-center fixed top-7 right-7">
+            <img
+              src={toggle ? close : menu}
+              alt="menu"
+              className="w-[20px] h-[28px] object-contain cursor-pointer"
+              onClick={toggleMenu}
+            />
+          </div>
+
+          <div className="flex justify-center items-center h-full">
+            <div className="w-full p-4">
+              <ul className="list-none flex flex-col gap-4 items-center lg:hidden justify-center">
+                {navLinks.map((nav) => (
+                  <li
+                    key={nav.id}
+                    className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                      active === nav.title ? "text-white" : "text-secondary"
+                    }`}
+                    onClick={() => {
+                      toggleMenu();
+                      setActive(nav.title);
+                    }}
+                  >
+                    <a href={`#${nav.id}`}>{nav.title}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>

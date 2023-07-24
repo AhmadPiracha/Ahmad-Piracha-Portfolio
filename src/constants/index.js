@@ -1,3 +1,4 @@
+import { FaTwitter, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 import {
   webDesign,
   MaintenanceIcon,
@@ -15,18 +16,12 @@ import {
   mongodb,
   git,
   figma,
-  docker,
-  // meta,
-  // starbucks,
-  // tesla,
-  // shopify,
   nuces,
   internsPak,
   newsApp,
   covidscreeningapp,
   textApp,
   portfolio,
-  threejs,
 } from "../assets";
 
 export const navLinks = [
@@ -87,54 +82,57 @@ const technologies = [
   {
     name: "HTML 5",
     icon: html,
+    level: 90,
   },
   {
     name: "CSS 3",
     icon: css,
+    level: 70,
   },
   {
     name: "JavaScript",
     icon: javascript,
+    level: 70,
   },
   {
     name: "TypeScript",
     icon: typescript,
+    level: 30,
   },
   {
     name: "React JS",
     icon: reactjs,
+    level: 70,
   },
   {
     name: "Redux Toolkit",
     icon: redux,
+    level: 50,
   },
   {
     name: "Tailwind CSS",
     icon: tailwind,
+    level: 60,
   },
   {
     name: "Node JS",
     icon: nodejs,
+    level: 50,
   },
   {
     name: "MongoDB",
     icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
+    level: 50,
   },
   {
     name: "git",
     icon: git,
+    level: 60,
   },
   {
     name: "figma",
     icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
+    level: 50,
   },
 ];
 
@@ -283,6 +281,29 @@ const projects = [
   },
 ];
 
+const social = [
+  {
+    name: "Twitter",
+    icon: FaTwitter,
+    link: "https://twitter.com/ahmadpiracha3",
+  },
+  {
+    name: "Instagram",
+    icon: FaInstagram,
+    link: "https://www.instagram.com/ahmadpiracha/",
+  },
+  {
+    name: "LinkedIn",
+    icon: FaLinkedin,
+    link: "https://www.linkedin.com/in/ahmad-piracha-1b1b3a1b2/",
+  },
+  {
+    name: "Github",
+    icon: FaGithub,
+    link: "https://www.github.com/AhmadPiracha",
+  },
+];
+
 export {
   services,
   technologies,
@@ -290,4 +311,5 @@ export {
   education,
   testimonials,
   projects,
+  social,
 };

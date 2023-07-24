@@ -11,13 +11,13 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../higherOrderComponents";
 import { slideIn } from "../utils/motion";
 import {
-  FaTwitter,
   FaInstagram,
   FaLinkedin,
   FaEnvelope,
   FaPhone,
+  FaFacebook,
+  FaWhatsapp,
 } from "react-icons/fa";
-// import { MdLocationOn } from "react-icons/md"; // Import location icon
 
 const Contact = () => {
   const formRef = useRef();
@@ -85,7 +85,7 @@ const Contact = () => {
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] flex flex-col gap-6"
       >
         {/* Heading */}
-        <h3 className="text-white text-2xl font-bold">Let's Connect</h3>
+        <h3 className={styles.sectionHeadText}>Let's Connect</h3>
 
         {/* Description */}
         <p className="text-white">
@@ -93,47 +93,74 @@ const Contact = () => {
           email, or contact number below. I'd love to hear from you!
         </p>
         {/* Social media links */}
-        <div className="flex gap-4">
-          <a
-            href="https://twitter.com/example"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white"
-          >
-            <FaTwitter size={24} />
-          </a>
-          <a
-            href="https://instagram.com/example"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white"
-          >
-            <FaInstagram size={24} />
-          </a>
-          <a
-            href="https://linkedin.com/in/example"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white"
-          >
-            <FaLinkedin size={24} />
-          </a>
+        <div className="flex gap-4 mt-5 justify-center">
+          <div className="icon-container group relative">
+            <a
+              href="https://www.facebook.com/ahmadwaseempiracha/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white"
+            >
+              <FaFacebook size={24} />
+            </a>
+            <p className="opacity-0 group-hover:opacity-100 bg-black text-white text-sm rounded py-1 px-2 absolute top-[-30px] left-1/2 transform -translate-x-1/2 transition-opacity duration-300">
+              Facebook
+            </p>
+          </div>
+          <div className="icon-container group relative">
+            <a
+              href="https://instagram.com/ahmadpiracha"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white"
+            >
+              <FaInstagram size={24} />
+            </a>
+            <p className="opacity-0 group-hover:opacity-100 bg-black text-white text-sm rounded py-1 px-2 absolute top-[-30px] left-1/2 transform -translate-x-1/2 transition-opacity duration-300">
+              Instagram
+            </p>
+          </div>
+          <div className="icon-container group relative">
+            <a
+              href="https://www.linkedin.com/in/ahmad-waseem-piracha/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white"
+            >
+              <FaLinkedin size={24} />
+            </a>
+            <p className="opacity-0 group-hover:opacity-100 bg-black text-white text-sm rounded py-1 px-2 absolute top-[-30px] left-1/2 transform -translate-x-1/2 transition-opacity duration-300">
+              LinkedIn
+            </p>
+          </div>
+          <div className="icon-container group relative">
+            <a
+              href="https://wa.me/923061138468"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white"
+            >
+              <FaWhatsapp size={24} />
+            </a>
+            <p className="opacity-0 group-hover:opacity-100 bg-black text-white text-sm rounded py-1 px-2 absolute top-[-30px] left-1/2 transform -translate-x-1/2 transition-opacity duration-300">
+              WhatsApp
+            </p>
+          </div>
         </div>
 
         {/* Email and contact number */}
-        <div className="flex items-center gap-4">
+        <div className="flex justify-center gap-4">
           <FaEnvelope size={24} className="text-white" />
-          <a href="mailto:example@example.com" className="text-white">
-            example@example.com
+          <a href="mailto:ahmadpiracha3@gmail.com" className="text-white">
+            ahmadpiracha3@gmail.com
           </a>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex justify-center gap-4">
           <FaPhone size={24} className="text-white" />
-          <span className="text-white">+1 123-456-7890</span>
+          <span className="text-white">(+92) 306 1138468</span>
         </div>
-
-        {/* Additional content can be added here */}
       </motion.div>
+
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
