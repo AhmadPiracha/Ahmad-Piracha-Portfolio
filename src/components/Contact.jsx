@@ -1,4 +1,8 @@
 /* eslint-disable react-refresh/only-export-components */
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/no-unknown-property */
+
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
@@ -6,6 +10,14 @@ import emailjs from "@emailjs/browser";
 import { styles } from "../styles";
 import { SectionWrapper } from "../higherOrderComponents";
 import { slideIn } from "../utils/motion";
+import {
+  FaTwitter,
+  FaInstagram,
+  FaLinkedin,
+  FaEnvelope,
+  FaPhone,
+} from "react-icons/fa";
+// import { MdLocationOn } from "react-icons/md"; // Import location icon
 
 const Contact = () => {
   const formRef = useRef();
@@ -66,10 +78,64 @@ const Contact = () => {
 
   return (
     <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+      className={`xl:mt-12 flex xl:flex-row flex-col gap-10 overflow-hidden`}
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
+        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] flex flex-col gap-6"
+      >
+        {/* Heading */}
+        <h3 className="text-white text-2xl font-bold">Let's Connect</h3>
+
+        {/* Description */}
+        <p className="text-white">
+          Feel free to reach out to me through any of the social media links,
+          email, or contact number below. I'd love to hear from you!
+        </p>
+        {/* Social media links */}
+        <div className="flex gap-4">
+          <a
+            href="https://twitter.com/example"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white"
+          >
+            <FaTwitter size={24} />
+          </a>
+          <a
+            href="https://instagram.com/example"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white"
+          >
+            <FaInstagram size={24} />
+          </a>
+          <a
+            href="https://linkedin.com/in/example"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white"
+          >
+            <FaLinkedin size={24} />
+          </a>
+        </div>
+
+        {/* Email and contact number */}
+        <div className="flex items-center gap-4">
+          <FaEnvelope size={24} className="text-white" />
+          <a href="mailto:example@example.com" className="text-white">
+            example@example.com
+          </a>
+        </div>
+        <div className="flex items-center gap-4">
+          <FaPhone size={24} className="text-white" />
+          <span className="text-white">+1 123-456-7890</span>
+        </div>
+
+        {/* Additional content can be added here */}
+      </motion.div>
+      <motion.div
+        variants={slideIn("right", "tween", 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
@@ -121,13 +187,6 @@ const Contact = () => {
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
-      </motion.div>
-
-      <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
-      >
-        
       </motion.div>
     </div>
   );
