@@ -39,7 +39,7 @@ const Hero = () => {
             <div className="aspect-w-1 aspect-h-1">
               <img
                 className="object-cover object-center w-full h-full rounded-full max-w-sm sm:max-w-full"
-                src="/src/assets/HeroProfile.jpg"
+                src="/src/assets/profile.jpg"
                 alt="Ahmad Piracha Profile"
               />
             </div>
