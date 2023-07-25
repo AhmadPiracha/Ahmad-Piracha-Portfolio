@@ -85,7 +85,7 @@ const Contact = () => {
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] flex flex-col gap-6"
       >
         {/* Heading */}
-        <h3 className={styles.sectionHeadText}>Let's Connect</h3>
+        <h3 className={styles.sectionHeadText}>Let's Connect.</h3>
 
         {/* Description */}
         <p className="text-white">

@@ -12,7 +12,7 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <h2 className={styles.sectionHeadText}>About Me</h2>
+        <h2 className={styles.sectionHeadText}>About Me.</h2>
       </motion.div>
 
       <motion.div
@@ -27,10 +27,10 @@ const About = () => {
       >
         Final year student at Fast National University, looking forward to
         working in Software Industry. I am familiar with programming languages,
-        such as C++, Python, and Javascript, always adding new skills. I am
-        looking forward to working as a Frontend Developer as a have experience
-        in building web using React Js. I’m also eager to meet other software
-        designers in the area, so feel free to connect!
+        such as C++, Python, and Javascript, always adding new skills.I am an
+        enthusiastic web developer, persistently engaged with the latest web
+        frameworks and technologies. I’m also eager to meet other software
+        designers in this domain, feel free to connect!
       </motion.p>
     </>
   );

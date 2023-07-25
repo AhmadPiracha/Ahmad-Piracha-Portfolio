@@ -42,11 +42,11 @@ const Services = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <h2 className={styles.sectionHeadText}>What I Do?</h2>
-
         <p className={styles.sectionSubText}>
           How I can help your next project
         </p>
+        <h2 className={styles.sectionHeadText}>What I Do?</h2>
+
       </motion.div>
       <div className="mt-10 flex flex-wrap gap-8">
         {services.map((service, index) => (

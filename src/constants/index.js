@@ -4,18 +4,6 @@ import {
   MaintenanceIcon,
   debugging,
   web,
-  // webIcon,
-  javascript,
-  typescript,
-  html,
-  css,
-  reactjs,
-  redux,
-  tailwind,
-  nodejs,
-  mongodb,
-  git,
-  figma,
   nuces,
   internsPak,
   newsApp,
@@ -25,7 +13,6 @@ import {
 } from "../assets";
 
 export const navLinks = [
-
   {
     id: "about",
     title: "About Me",
@@ -82,57 +69,55 @@ const services = [
 const technologies = [
   {
     name: "HTML 5",
-    icon: html,
     level: 90,
   },
   {
     name: "CSS 3",
-    icon: css,
+
     level: 70,
   },
   {
     name: "JavaScript",
-    icon: javascript,
     level: 70,
   },
   {
     name: "TypeScript",
-    icon: typescript,
+
     level: 30,
   },
   {
     name: "React JS",
-    icon: reactjs,
+
     level: 70,
   },
   {
     name: "Redux Toolkit",
-    icon: redux,
+
     level: 50,
   },
   {
     name: "Tailwind CSS",
-    icon: tailwind,
+
     level: 60,
   },
   {
     name: "Node JS",
-    icon: nodejs,
+
     level: 50,
   },
   {
     name: "MongoDB",
-    icon: mongodb,
+
     level: 50,
   },
   {
     name: "git",
-    icon: git,
+
     level: 60,
   },
   {
     name: "figma",
-    icon: figma,
+
     level: 50,
   },
 ];

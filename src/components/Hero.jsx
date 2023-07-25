@@ -1,5 +1,6 @@
 import { styles } from "../styles";
 import { resume } from "../assets";
+import { profile } from "../assets";
 const Hero = () => {
   return (
     <>
@@ -39,7 +40,7 @@ const Hero = () => {
             <div className="aspect-w-1 aspect-h-1">
               <img
                 className="object-cover object-center w-full h-full rounded-full max-w-sm sm:max-w-full"
-                src="/src/assets/profile.jpg"
+                src={profile}
                 alt="Ahmad Piracha Profile"
               />
             </div>
