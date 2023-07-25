@@ -3,7 +3,7 @@ import { resume } from "../assets";
 const Hero = () => {
   return (
     <>
-      <section className="relative w-full h-screen mx-auto flex items-center justify-center">
+      <section className="relative w-full h-screen mx-auto flex items-center justify-center bg-hero-pattern bg-cover bg-no-repeat bg-center">
         <div
           className={`${styles.paddingX} max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start lg:gap-5 md:gap-5 sm:gap-2 lg:pt-20`}
         >

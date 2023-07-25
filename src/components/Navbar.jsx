@@ -3,7 +3,12 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
-
+import {
+  FaInstagram,
+  FaLinkedin,
+  FaFacebook,
+  FaWhatsapp,
+} from "react-icons/fa";
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
@@ -77,11 +82,11 @@ const Navbar = () => {
 
           <div className="flex justify-center items-center h-full">
             <div className="w-full p-4">
-              <ul className="list-none flex flex-col gap-4 items-center lg:hidden justify-center">
+              <ul className="list-none flex flex-col gap-6 items-center lg:hidden justify-center">
                 {navLinks.map((nav) => (
                   <li
                     key={nav.id}
-                    className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                    className={`font-poppins font-medium cursor-pointer text-[18px] ${
                       active === nav.title ? "text-white" : "text-secondary"
                     }`}
                     onClick={() => {
@@ -93,6 +98,61 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
+              {/* Social media links */}
+              <div className="flex gap-4 mt-10 justify-center">
+                <div className="icon-container group relative">
+                  <a
+                    href="https://www.facebook.com/ahmadwaseempiracha/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white"
+                  >
+                    <FaFacebook size={24} />
+                  </a>
+                  <p className="opacity-0 group-hover:opacity-100 bg-black text-white text-sm rounded py-1 px-2 absolute top-[-30px] left-1/2 transform -translate-x-1/2 transition-opacity duration-300">
+                    Facebook
+                  </p>
+                </div>
+                <div className="icon-container group relative">
+                  <a
+                    href="https://instagram.com/ahmadpiracha"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white"
+                  >
+                    <FaInstagram size={24} />
+                  </a>
+                  <p className="opacity-0 group-hover:opacity-100 bg-black text-white text-sm rounded py-1 px-2 absolute top-[-30px] left-1/2 transform -translate-x-1/2 transition-opacity duration-300">
+                    Instagram
+                  </p>
+                </div>
+                <div className="icon-container group relative">
+                  <a
+                    href="https://www.linkedin.com/in/ahmad-waseem-piracha/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white"
+                  >
+                    <FaLinkedin size={24} />
+                  </a>
+                  <p className="opacity-0 group-hover:opacity-100 bg-black text-white text-sm rounded py-1 px-2 absolute top-[-30px] left-1/2 transform -translate-x-1/2 transition-opacity duration-300">
+                    LinkedIn
+                  </p>
+                </div>
+                <div className="icon-container group relative">
+                  <a
+                    href="https://wa.me/923061138468"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white"
+                  >
+                    <FaWhatsapp size={24} />
+                  </a>
+                  <p className="opacity-0 group-hover:opacity-100 bg-black text-white text-sm rounded py-1 px-2 absolute top-[-30px] left-1/2 transform -translate-x-1/2 transition-opacity duration-300">
+                    WhatsApp
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

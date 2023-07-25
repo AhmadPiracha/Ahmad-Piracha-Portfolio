@@ -13,7 +13,7 @@ const Footer = () => {
         <p>
           Designed by
           <a
-            href="https://github.com/AhmadPiracha"
+            href="https://www.linkedin.com/in/ahmad-waseem-piracha/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-300 hover:text-blue-500"
