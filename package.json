@@ -1,5 +1,6 @@
 {
   "name": "ahmadpiracha-portfolio",
+  "homepage": " https://ahmadpiracha.github.io",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +8,10 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy" : "npm run build", 
+    "deploy": "gh-pages -d build"
+
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
@@ -17,6 +21,7 @@
     "dotenv": "^16.3.1",
     "file-saver": "^2.0.5",
     "framer-motion": "^10.12.18",
+    "gh-pages": "^5.0.0",
     "jspdf": "^2.5.1",
     "maath": "^0.7.0",
     "postcss": "^8.4.25",
