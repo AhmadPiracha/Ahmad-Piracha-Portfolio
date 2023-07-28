@@ -91,7 +91,7 @@ const Experience = () => {
       {/* EDUCATION */}
       <div className="mt-5">
         <motion.div variants={textVariant()}>
-          <h2 className={styles.sectionSubText}>My Education</h2>
+          <h2 className={styles.sectionHeadText}>My Education</h2>
         </motion.div>
 
         <div className="mt-10 flex flex-col">

@@ -21,16 +21,18 @@ const About = () => {
       >
         Hi, I'm <span className="text-[#fefdff]">Ahmad Waseem Piracha</span>
       </motion.div>
+
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        className={`mt-4 text-secondary max-w-3xl
+          text-base sm:text-lg lg:text-xl   // Responsive text sizes
+        `}
       >
-        Final year student at Fast National University, looking forward to
-        working in Software Industry. I am familiar with programming languages,
-        such as C++, Python, and Javascript, always adding new skills.I am an
-        enthusiastic web developer, persistently engaged with the latest web
-        frameworks and technologies. I’m also eager to meet other software
-        designers in this domain, feel free to connect!
+        "Experienced web developer with a strong focus on frontend technologies,
+        specializing in creating clean, user-friendly websites. Looking forward
+        to working in the Software Industry. By utilizing cutting-edge frontend
+        frameworks and tools, I deliver impactful digital experiences. Let's
+        collaborate to bring your vision to life! Feel free to connect."
       </motion.p>
     </>
   );

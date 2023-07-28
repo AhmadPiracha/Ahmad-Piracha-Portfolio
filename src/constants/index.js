@@ -50,19 +50,19 @@ const services = [
     title: "Web Design",
     icon: webDesign,
     description:
-      "I craft modern, user-friendly websites that seamlessly blend functionality and stunning visuals, ensuring an engaging online experience for your visitors while reflecting the unique identity of your brand.",
+      "I design modern, user-friendly websites with seamless functionality and stunning visuals that leave a lasting impression. Captivate your audience with a focus on aesthetics and usability to reflect your brand's unique identity.",
   },
   {
     title: "Maintenance",
     icon: MaintenanceIcon,
     description:
-      "I offer reliable website maintenance services to ensure your online presence remains up-to-date, secure, and optimized for optimal performance. Regular updates, bug fixes, and content management are seamlessly handled to keep your website running smoothly.",
+      "I provide reliable website maintenance services for an up-to-date, secure, and optimized online presence. Seamlessly handle regular updates, bug fixes, and content management to ensure smooth website performance. Trust in my expertise to keep your site running flawlessly.",
   },
   {
     title: "Bug Fixing",
     icon: debugging,
     description:
-      "As a meticulous problem solver, I possess a deep understanding of various programming languages and frameworks, allowing me to efficiently identify and resolve software bugs, ensuring your applications run flawlessly and provide an exceptional user experience.",
+      "As a highly skilled problem solver, with deep knowledge of programming languages and frameworks. Swiftly resolves software bugs for flawless applications and top-notch user experience. Meticulous, efficient, and highly skilled. Ensures exceptional results every time.",
   },
 ];
 
