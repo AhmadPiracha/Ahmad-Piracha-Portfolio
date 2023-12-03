@@ -18,7 +18,7 @@ import covidscreeningapp from "./covid-screening-app.png";
 import textApp from "./textApp.png";
 import portfolio from "./portfolio.png";
 
-import resume from "./company/Resume Muhammad Ahmad Waseem Piracha.pdf";
+import resume from "./company/Muhammad Ahmad Waseem-Resume.pdf";
 import profile from "./company/profile.png";
 
 export {
