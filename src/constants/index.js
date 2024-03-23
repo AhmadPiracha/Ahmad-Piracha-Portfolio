@@ -6,6 +6,8 @@ import {
   web,
   nuces,
   internsPak,
+  astechware,
+  sportix,
   newsApp,
   covidscreeningapp,
   textApp,
@@ -66,69 +68,63 @@ const services = [
   },
 ];
 
-const technologies = [
-  {
-    name: "HTML 5",
-    level: 90,
-  },
-  {
-    name: "CSS 3",
 
-    level: 70,
-  },
-  {
-    name: "JavaScript",
-    level: 70,
-  },
-  {
-    name: "TypeScript",
+const technologies = {
 
-    level: 30,
-  },
-  {
-    name: "React JS",
+Programming_Languages: [
+    { name: "JavaScript" },
+    { name: "Python" },
+    { name: "Ruby" },
+    { name: "C++" },
+    { name: "SQL" },
+    
+  ],
+  Frameworks: [
+    { name: "React Native" },
+    { name: "Expo" },
+    { name: "MERN" },
+    { name: "Tailwind CSS" },
+    { name: "Bootstrap" },
+    { name: "Firebase" },
+  ],
+  Tools: [
+    { name: "VS Code" },
+    { name: "Figma" },
+    { name: "Git" },
 
-    level: 70,
-  },
-  {
-    name: "Redux Toolkit",
+  ]
+};
 
-    level: 50,
-  },
-  {
-    name: "Tailwind CSS",
-
-    level: 60,
-  },
-  {
-    name: "Node JS",
-
-    level: 50,
-  },
-  {
-    name: "MongoDB",
-
-    level: 50,
-  },
-  {
-    name: "git",
-
-    level: 60,
-  },
-  {
-    name: "figma",
-
-    level: 50,
-  },
-];
 
 const experiences = [
+  {
+    title: "Associate Software Engineer",
+    company_name:  "Astechware",
+    icon: astechware,
+    iconBg: "#E6DEDD",
+    date: "Jan 2024 - Present",
+    points: [
+      "Problem Solver, Collaborative Team Player, Continuous Learner.",
+    ],
+  },
+  {
+    title: "SportiX (Final Year Project)",
+    company_name: "FAST-NUCES",
+    icon: sportix,
+    iconBg: "#E6DEDD",
+    date: "Feb 2023 - Dec 2023",
+    points: [
+      "SportiX is a web and mobile app, to streamline sports department operations at FAST NUCES.",
+      "This enables administrators to streamline sports activity and allows students to conveniently book their desired sports items.",
+      "Developed using React Native, Node.js, Express.js, SQL, Firebase, MongoDB, and Bootstrap.",
+    ],
+  },
   {
     title: "Frontend Developer Intern",
     company_name: "Interns Pakistan ",
     icon: internsPak,
     iconBg: "#E6DEDD",
-    date: "Aug 2022- Sep 2022",
+    date: "Aug 2022 - Sep 2022",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -136,6 +132,7 @@ const experiences = [
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
+
 ];
 
 const education = [
