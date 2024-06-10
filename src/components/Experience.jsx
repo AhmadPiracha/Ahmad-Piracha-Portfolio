@@ -102,6 +102,13 @@ const Experience = () => {
           </VerticalTimeline>
         </div>
       </div>
+
+       {/* CERTIFICATION */}
+       {/* <div className="mt-5">
+        <motion.div variants={textVariant()}>
+          <h2 className={styles.sectionHeadText}>My Certifications</h2>
+        </motion.div>
+      </div> */}
     </>
   );
 };

@@ -15,7 +15,7 @@ const Navbar = () => {
 
   const [hideNavbar, setHideNavbar] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const SCROLL_THRESHOLD = 50; // Adjust this value if needed
+  const SCROLL_THRESHOLD = 50; 
 
   useEffect(() => {
     const handleScroll = () => {
