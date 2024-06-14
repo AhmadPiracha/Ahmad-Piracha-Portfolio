@@ -23,6 +23,12 @@ import portfolio from "./portfolio.png";
 import resume from "./company/Muhammad Ahmad Wassem - Resume.pdf";
 import profile from "./company/profile-pic.png";
 
+import advancedReact from "./certificates/Advanced React.png";
+import reactJS from "./certificates/React JS.png";
+import versionControl from "./certificates/Version Control.png";
+import webdev from "./certificates/Web Development.png";
+
+
 export {
     logo,
     MaintenanceIcon,
@@ -44,4 +50,8 @@ export {
     astechware,
     sportix,
     profile,
+    advancedReact,
+    reactJS,
+    versionControl,
+    webdev,
 };

@@ -10,6 +10,7 @@ import {
   Works,
   Footer,
 } from "./components";
+import Certifications from "./components/Certifications";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Experience />
         <Tech />
         <Works />
+        <Certifications/>
         <div className="relative z-0">
           <Contact />
         </div>

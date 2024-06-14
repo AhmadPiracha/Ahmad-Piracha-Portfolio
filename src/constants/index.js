@@ -12,7 +12,13 @@ import {
   covidscreeningapp,
   textApp,
   portfolio,
+  advancedReact,
+  reactJS,
+  webdev,
+  versionControl,
 } from "../assets";
+
+
 
 export const navLinks = [
   {
@@ -264,6 +270,102 @@ const projects = [
   },
 ];
 
+const certificates = [
+  {
+    name: "Meta - Advanced React",
+    description:
+      "A web-based platform that allows users to view my portfolio made using React and Tailwind CSS",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Front-End Web Development",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "meta",
+        color: "green-text-gradient",
+      },
+      {
+        name: "coursera",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: advancedReact,
+    source_code_link: "https://coursera.org/share/8a9dc12d5ef5f28530c5d756ff521925",
+  },
+  {
+    name: "Meta - Version Control",
+    description:
+      "Web-based platform that allows users to watch news of their interest made using React and NewsAPI",
+    tags: [
+      {
+        name: "Version Control",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Github",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Web Development",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Linux",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: versionControl,
+    source_code_link: "https://coursera.org/share/643caf4ebb4010ef0173e6e0a73382e2",
+  },
+  {
+    name: "React JS - Frontend Web Development",
+    description:
+      "A web-based platform that allows users to screen themselves for COVID-19 symptoms and provides them with a risk assessment based on their responses.",
+    tags: [
+      {
+        name: "reactjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "jquery",
+        color: "green-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: reactJS,
+    source_code_link:
+      "https://www.udemy.com/certificate/UC-2c2d6daf-672f-41fc-bd11-1c2f023a9e73/",
+  },
+  {
+    name: "Responsive Web Development",
+    description:
+      "A web-based platform that allows users to perform various text operations such as converting text to uppercase, removing extra spaces, etc.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "bootstrap",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: webdev,
+    source_code_link: "https://www.udemy.com/certificate/UC-e64c5ba3-4af6-4aed-9576-b5ae1034d241",
+  },
+];
+
 const social = [
   {
     name: "Twitter",
@@ -293,6 +395,7 @@ export {
   experiences,
   education,
   testimonials,
+  certificates,
   projects,
   social,
 };
