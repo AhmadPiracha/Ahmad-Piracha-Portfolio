@@ -19,6 +19,7 @@ import newsApp from "./newsApp.png";
 import covidscreeningapp from "./covid-screening-app.png";
 import textApp from "./textApp.png";
 import portfolio from "./portfolio.png";
+import jobVilla from "./jobvilla.png"
 
 import resume from "./company/Muhammad Ahmad Wassem - Resume.pdf";
 import profile from "./company/profile-pic.png";
@@ -44,6 +45,7 @@ export {
     covidscreeningapp,
     textApp,
     portfolio,
+    jobVilla,
     resume,
     nuces,
     internsPak,

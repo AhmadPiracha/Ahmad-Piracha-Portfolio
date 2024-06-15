@@ -11,6 +11,7 @@ import {
   newsApp,
   covidscreeningapp,
   textApp,
+  jobVilla,
   portfolio,
   advancedReact,
   reactJS,
@@ -184,7 +185,7 @@ const testimonials = [
 
 const projects = [
   {
-    name: "My Portfolio",
+    name: "Ahmad Piracha Portfolio",
     description:
       "A web-based platform that allows users to view my portfolio made using React and Tailwind CSS",
     tags: [
@@ -224,6 +225,31 @@ const projects = [
     ],
     image: newsApp,
     source_code_link: "https://github.com/AhmadPiracha/my-news-app",
+  },
+  {
+    name: "Job Villa",
+    description:
+      "A web-based landing page that showcases my frontend development skills.",
+    tags: [
+      {
+        name: "html",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "bootstrap",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: jobVilla,
+    source_code_link: "https://github.com/AhmadPiracha/job-villa-task",
   },
   {
     name: "Covid Screening Tool",
