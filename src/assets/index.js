@@ -21,7 +21,7 @@ import textApp from "./textApp.png";
 import portfolio from "./portfolio.png";
 import jobVilla from "./jobvilla.png"
 
-import resume from "./company/Muhammad Ahmad Wassem - Resume.pdf";
+import resume from "./company/Muhammad Ahmad Waseem - Resume.pdf";
 import profile from "./company/profile-pic.png";
 
 import advancedReact from "./certificates/Advanced React.png";

@@ -22,7 +22,6 @@ const Hero = () => {
               <button className="bg-blue-500 hover:bg-white hover:text-blue-500 text-white font-bold py-2 px-4 rounded">
                 <a
                   href={resume}
-                  download="Muhammad Ahmad Waseem Piracha-Resume"
                   target="_blank"
                   rel="noreferrer"
                 >
