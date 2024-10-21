@@ -14,6 +14,8 @@ import nuces from "./nuces.png";
 import internsPak from "./internsPak.jpeg";
 import astechware from "./astechware-logo.jpg";
 import sportix from "./sportix-logo.png";
+import upwork from './upwork.svg';
+import opusai from './opusai.jpg';
 
 import newsApp from "./newsApp.png";
 import covidscreeningapp from "./covid-screening-app.png";
@@ -51,6 +53,8 @@ export {
     internsPak,
     astechware,
     sportix,
+    upwork,
+    opusai,
     profile,
     advancedReact,
     reactJS,
