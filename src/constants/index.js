@@ -114,7 +114,7 @@ const experiences = [{
         company_name: "Astechware",
         icon: astechware,
         iconBg: "#E6DEDD",
-        date: "Jan 2024 - Aug 2024",
+        date: "July 2023 - Sep 2024",
         points: [
             "Collaborated on web applications using Ruby on Rails, designing and implementing dynamic features to meet client specifications.",
             "I have developed modern web applications using JavaScript, enhancing user experience with interactive and responsive front‑end features.",
