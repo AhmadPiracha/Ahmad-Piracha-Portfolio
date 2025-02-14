@@ -22,9 +22,11 @@ import covidscreeningapp from "./covid-screening-app.png";
 import textApp from "./textApp.png";
 import portfolio from "./portfolio.png";
 import jobVilla from "./jobvilla.png"
+import replyCortex from './slide1.png';
 
 import resume from "./company/Muhammad Ahmad Waseem - Resume.pdf";
 import profile from "./company/profile-pic.png";
+import ahmad from './ahmad.png';
 
 import advancedReact from "./certificates/Advanced React.png";
 import reactJS from "./certificates/React JS.png";
@@ -48,6 +50,7 @@ export {
     textApp,
     portfolio,
     jobVilla,
+    replyCortex,
     resume,
     nuces,
     internsPak,
@@ -60,4 +63,5 @@ export {
     reactJS,
     versionControl,
     webdev,
+    ahmad,
 };

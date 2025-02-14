@@ -7,7 +7,7 @@ import {
     nuces,
     internsPak,
     astechware,
-    sportix,
+    // sportix,
     newsApp,
     covidscreeningapp,
     textApp,
@@ -17,8 +17,9 @@ import {
     reactJS,
     webdev,
     versionControl,
-    // upwork,
+    upwork,
     opusai,
+    replyCortex,
 } from "../assets";
 
 export const navLinks = [{
@@ -73,16 +74,16 @@ const technologies = {
     Programming_Languages: [
         { name: "JavaScript" },
         { name: "Python" },
-        { name: "Ruby" },
         { name: "C++" },
         { name: "SQL" },
     ],
     Frameworks: [
+        { name: "React JS" },
+        { name: "Next JS" },
+        { name: "Node JS" },
         { name: "React Native" },
-        { name: "Expo" },
-        { name: "MERN" },
         { name: "Tailwind CSS" },
-        { name: "Bootstrap" },
+        { name: "MUI" },
         { name: "Firebase" },
     ],
     Tools: [{ name: "VS Code" }, { name: "Figma" }, { name: "Git" }],
@@ -101,14 +102,17 @@ const experiences = [{
 
         ],
     },
-    // {
-    //     title: "Software Engineer",
-    //     company_name: "Upwork",
-    //     icon: upwork,
-    //     iconBg: "#E6DEDD",
-    //     date: "Jun 2022 - Present",
-    //     points: [],
-    // },
+    {
+        title: "Software Engineer",
+        company_name: "Upwork",
+        icon: upwork,
+        iconBg: "#E6DEDD",
+        date: "Jan 2025 - Present",
+        points: [
+            "A passionate Full Stack Developer with over 2 years of hands-on experience in building dynamic web and mobile applications.",
+            "My diverse skill set, and extensive project experience make me the ideal candidate to bring your vision to life."
+        ],
+    },
     {
         title: "Associate Software Engineer",
         company_name: "Astechware",
@@ -121,18 +125,18 @@ const experiences = [{
             "Integrated Stripe for secure and efficient payment processing within web applications.",
         ],
     },
-    {
-        title: "SportiX (Final Year Project)",
-        company_name: "FAST-NUCES",
-        icon: sportix,
-        iconBg: "#E6DEDD",
-        date: "Feb 2023 - Dec 2023",
-        points: [
-            "SportiX is a web and mobile app, to streamline sports department operations at FAST NUCES.",
-            "This enables administrators to streamline sports activity and allows students to conveniently book their desired sports items.",
-            "Developed using React Native, Node.js, Express.js, SQL, Firebase, MongoDB, and Bootstrap.",
-        ],
-    },
+    // {
+    //     title: "SportiX (Final Year Project)",
+    //     company_name: "FAST-NUCES",
+    //     icon: sportix,
+    //     iconBg: "#E6DEDD",
+    //     date: "Feb 2023 - Dec 2023",
+    //     points: [
+    //         "SportiX is a web and mobile app, to streamline sports department operations at FAST NUCES.",
+    //         "This enables administrators to streamline sports activity and allows students to conveniently book their desired sports items.",
+    //         "Developed using React Native, Node.js, Express.js, SQL, Firebase, MongoDB, and Bootstrap.",
+    //     ],
+    // },
     {
         title: "Frontend Developer Intern",
         company_name: "Interns Pakistan ",
@@ -200,6 +204,25 @@ const projects = [{
         ],
         image: portfolio,
         source_code_link: "https://github.com/AhmadPiracha",
+    },
+    {
+        name: "Reply Cortex",
+        description: "Cortex Reply’s React Library: Modular, design-system-driven components to accelerate development and ensure brand coherence across all web applications.",
+        tags: [{
+                name: "nextjs",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "typescript",
+                color: "green-text-gradient",
+            },
+            {
+                name: "shadcn",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: replyCortex,
+        source_code_link: "https://github.com/AhmadPiracha/react-components",
     },
     {
         name: "News App",
