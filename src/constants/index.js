@@ -20,6 +20,9 @@ import {
     upwork,
     opusai,
     replyCortex,
+    deadpool,
+    linkspire,
+    habitspark,
 } from "../assets";
 
 export const navLinks = [{
@@ -83,10 +86,10 @@ const technologies = {
         { name: "Node JS" },
         { name: "React Native" },
         { name: "Tailwind CSS" },
-        { name: "MUI" },
+        { name: "ShadCN" },
         { name: "Firebase" },
     ],
-    Tools: [{ name: "VS Code" }, { name: "Figma" }, { name: "Git" }],
+    Tools: [{ name: "VS Code" }, { name: "Git" }, { name: "OpenAI" },]
 };
 
 const experiences = [{
@@ -186,9 +189,10 @@ const testimonials = [{
     },
 ];
 
-const projects = [{
-        name: "Ahmad Piracha Portfolio",
-        description: "A web-based platform that allows users to view my portfolio made using React and Tailwind CSS",
+const projects = [
+    {
+        name: "Marvel DeadPool",
+        description: "An animated deadpool landing page with creative transitions for marvel fans using React and GSAP.",
         tags: [{
                 name: "react",
                 color: "blue-text-gradient",
@@ -198,12 +202,12 @@ const projects = [{
                 color: "pink-text-gradient",
             },
             {
-                name: "motion-framer",
+                name: "gsap",
                 color: "green-text-gradient",
             },
         ],
-        image: portfolio,
-        source_code_link: "https://github.com/AhmadPiracha",
+        image: deadpool,
+        source_code_link: "https://marvel-deadpool.vercel.app/",
     },
     {
         name: "Reply Cortex",
@@ -223,6 +227,63 @@ const projects = [{
         ],
         image: replyCortex,
         source_code_link: "https://github.com/AhmadPiracha/react-components",
+    },
+    {
+        name: "Linkspire",
+        description: "A profile-focused app for professional networking and job posting, designed to help users connect and find job opportunities.",
+        tags: [{
+                name: "reactjs",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "javascript",
+                color: "green-text-gradient",
+            },
+            {
+                name: "tailwind css",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: linkspire,
+        source_code_link: "https://linkspire-app.vercel.app/",
+    },
+    {
+        name: "Habitspark",
+        description: "A habit tracker with streaks and daily reminders to help users build and maintain good habits.",
+        tags: [{
+                name: "reactjs",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "javascript",
+                color: "green-text-gradient",
+            },
+            {
+                name: "tailwind css",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: habitspark,
+        source_code_link: "https://habitspark-app.vercel.app/add-habit",
+    },
+    {
+        name: "Ahmad Piracha Portfolio",
+        description: "A web-based platform that allows users to view my portfolio made using React and Tailwind CSS",
+        tags: [{
+                name: "react",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "tailwind",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "motion-framer",
+                color: "green-text-gradient",
+            },
+        ],
+        image: portfolio,
+        source_code_link: "https://github.com/AhmadPiracha",
     },
     {
         name: "News App",

@@ -23,6 +23,9 @@ import textApp from "./textApp.png";
 import portfolio from "./portfolio.png";
 import jobVilla from "./jobvilla.png"
 import replyCortex from './slide1.png';
+import deadpool from './deadpool.jpg';
+import linkspire from './linkspire.jpg';
+import habitspark from './habitspark.jpg';
 
 import resume from "./company/Muhammad Ahmad Waseem - Resume.pdf";
 import profile from "./company/profile-pic.png";
@@ -51,6 +54,9 @@ export {
     portfolio,
     jobVilla,
     replyCortex,
+    deadpool,
+    linkspire,
+    habitspark,
     resume,
     nuces,
     internsPak,

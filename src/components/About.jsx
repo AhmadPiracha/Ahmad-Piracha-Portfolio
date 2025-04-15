@@ -26,7 +26,7 @@ const About = () => {
           text-base sm:text-lg lg:text-xl   // Responsive text sizes
         `}
       >
-        "Experienced web developer with a strong focus on frontend technologies,
+        "Experienced Software Engineer with a strong focus on frontend technologies,
         specializing in creating clean, user-friendly websites. Looking forward
         to working in the Software Industry. By utilizing cutting-edge frontend
         frameworks and tools, I deliver impactful digital experiences. Let's
