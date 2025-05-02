@@ -93,7 +93,7 @@ const technologies = {
 };
 
 const experiences = [{
-        title: "Associate Software Engineer",
+        title: "Software Engineer",
         company_name: "OpusAI",
         icon: opusai,
         iconBg: "#E6DEDD",
