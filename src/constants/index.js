@@ -17,7 +17,7 @@ import {
     reactJS,
     webdev,
     versionControl,
-    upwork,
+    // upwork,
     opusai,
     replyCortex,
     deadpool,
@@ -99,23 +99,24 @@ const experiences = [{
         iconBg: "#E6DEDD",
         date: "Sep 2024 - Present",
         points: [
-            "As an Associate Developer at OPUS AI, I designed and implemented user interfaces that are both visually appealing and functional, using Svelte.",
-            "I collaborated closely with a talented team of developers and designers to enhance features and optimize existing applications.",
+            "At OpusAI, I contributed to a project by developing and optimizing enhanced user interfaces using React.js, Svelte.js and API functionality.",
+            "I created REST APIs for downloading PDFs containing applicant data and Excel files listing applicants and other functionalities.",
+            "Developed Figma-to-code designs to built dynamic pages, set up automated CI/CD pipelines with Jenkins to reduce code integration time and accelerate software releases.",
             "Collaborating closely with a talented team of developers and designers to feature enhancements, optimizing existing applications, and leading debugging efforts to ensure seamless user experiences.",
 
         ],
     },
-    {
-        title: "Software Engineer",
-        company_name: "Upwork",
-        icon: upwork,
-        iconBg: "#E6DEDD",
-        date: "Jan 2025 - Present",
-        points: [
-            "A passionate Full Stack Developer with over 2 years of hands-on experience in building dynamic web and mobile applications.",
-            "My diverse skill set, and extensive project experience make me the ideal candidate to bring your vision to life."
-        ],
-    },
+    // {
+    //     title: "Software Engineer",
+    //     company_name: "Upwork",
+    //     icon: upwork,
+    //     iconBg: "#E6DEDD",
+    //     date: "Jan 2025 - Present",
+    //     points: [
+    //         "A passionate Full Stack Developer with over 2 years of hands-on experience in building dynamic web and mobile applications.",
+    //         "My diverse skill set, and extensive project experience make me the ideal candidate to bring your vision to life."
+    //     ],
+    // },
     {
         title: "Associate Software Engineer",
         company_name: "Astechware",
