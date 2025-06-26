@@ -22,7 +22,7 @@ const Hero = () => {
                   Resume 📝
                 </a>
               </button>
-              <button className="bg-white text-blue-500 font-bold py-2 px-5 rounded">
+{/*               <button className="bg-white text-blue-500 font-bold py-2 px-5 rounded">
                 <a
                   href="https://www.upwork.com/freelancers/ahmadwaseemp"
                   target="_blank"
@@ -30,7 +30,7 @@ const Hero = () => {
                 >
                   Hire Me
                 </a>
-              </button>
+              </button> */}
             </div>
           </div>
 
