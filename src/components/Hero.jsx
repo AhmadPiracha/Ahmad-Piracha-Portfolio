@@ -16,13 +16,13 @@ const Hero = () => {
             <p className={`${styles.heroSubText} text-white-100 mt-2`}>
               A SOFTWARE ENGINEER
             </p>
-            <div className="mt-5 space-x-4">
+{/*             <div className="mt-5 space-x-4">
               <button className="bg-blue-500 hover:bg-white hover:text-blue-500 text-white font-bold py-2 px-4 rounded">
                 <a href={resume} target="_blank" rel="noreferrer">
                   Resume 📝
                 </a>
               </button>
-{/*               <button className="bg-white text-blue-500 font-bold py-2 px-5 rounded">
+              <button className="bg-white text-blue-500 font-bold py-2 px-5 rounded">
                 <a
                   href="https://www.upwork.com/freelancers/ahmadwaseemp"
                   target="_blank"
@@ -30,8 +30,8 @@ const Hero = () => {
                 >
                   Hire Me
                 </a>
-              </button> */}
-            </div>
+              </button>
+            </div> */}
           </div>
 
           {/* Image container */}
