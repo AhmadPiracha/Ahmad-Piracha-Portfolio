@@ -34,141 +34,150 @@ const Navbar = () => {
 
   return (
     <nav
-    className={`fixed top-0 z-20 w-full bg-primary transition-transform duration-300 ${styles.paddingX} flex items-center py-5 ${
-      hideNavbar ? "-translate-y-full" : ""
-    }`}
-  >
-    <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-      <Link
-        to="/"
-        className="flex items-center gap-2"
-        onClick={() => {
-          setActive("");
-          window.scrollTo(0, 0);
-        }}
-      >
-        <img
-          src={logo}
-          alt="logo"
-          className="w-11 h-11 object-contain"
-        />
-        <p className="text-[18px] font-bold text-white cursor-pointer">
-          Ahmad Piracha
-        </p>
-      </Link>
+      className={`fixed top-0 z-20 w-full bg-primary/80 backdrop-blur-md transition-transform duration-300 border-b border-accent-cyan/10 ${styles.paddingX} flex items-center py-5 ${
+        hideNavbar ? "-translate-y-full" : ""
+      }`}
+    >
+      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+        {/* Logo */}
+        <Link
+          to="/"
+          className="flex items-center gap-2 hover:text-accent-cyan transition-colors duration-300 group"
+          onClick={() => {
+            setActive("");
+            window.scrollTo(0, 0);
+          }}
+        >
+          <img
+            src={logo}
+            alt="logo"
+            className="w-11 h-11 object-contain group-hover:brightness-125 transition-all duration-300"
+          />
+          <p className="text-[18px] font-bold text-white cursor-pointer group-hover:text-accent-cyan transition-colors duration-300">
+            Ahmad Piracha
+          </p>
+        </Link>
 
-      <ul className="list-none lg:flex hidden flex-row gap-6">
-        {navLinks.map((link) => (
-          <li
-            key={link.id}
-            className={`${
-              active === link.title ? "text-white" : "text-secondary"
-            } hover:text-white font-medium text-[18px] cursor-pointer`}
-            onClick={() => {
-              setActive(link.title);
-              window.scrollTo(0, 0);
-            }}
-          >
-            <a href={`#${link.id}`}>{link.title}</a>
-          </li>
-        ))}
-      </ul>
+        {/* Desktop Menu */}
+        <ul className="list-none lg:flex hidden flex-row gap-8">
+          {navLinks.map((link) => (
+            <li key={link.id}>
+              <a
+                href={`#${link.id}`}
+                onClick={() => setActive(link.title)}
+                className={`font-medium text-[16px] transition-all duration-300 relative group pb-2 ${
+                  active === link.title
+                    ? "text-accent-cyan"
+                    : "text-secondary hover:text-white"
+                }`}
+              >
+                {link.title}
+                {/* Underline animation */}
+                <span
+                  className={`absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-accent-cyan to-accent-violet transition-all duration-300 ${
+                    active === link.title ? "w-full" : "w-0 group-hover:w-full"
+                  }`}
+                ></span>
+              </a>
+            </li>
+          ))}
+        </ul>
 
-      <div className="lg:hidden flex items-center">
-        <img
-          src={toggle ? close : menu}
-          alt="menu"
-          className="w-[20px] h-[28px] object-contain cursor-pointer"
-          onClick={toggleMenu}
-        />
-      </div>
+        {/* Mobile Menu Button */}
+        <div className="lg:hidden flex items-center gap-4">
+          <img
+            src={toggle ? close : menu}
+            alt="menu"
+            className="w-[24px] h-[24px] object-contain cursor-pointer hover:brightness-125 transition-all duration-300"
+            onClick={toggleMenu}
+          />
+        </div>
 
-      <div
-        className={`fixed top-0 right-0 h-screen w-full bg-primary bg-opacity-90 z-50 transform transition-transform ${
-          toggle ? "translate-x-0" : "translate-x-full"
-        } sm:block ${toggle ? "block" : "hidden"} lg:hidden`}
-      >
-          <div className="lg:hidden flex items-center fixed top-7 right-7">
+        {/* Mobile Drawer Menu */}
+        <div
+          className={`fixed top-0 right-0 h-screen w-full bg-primary/95 backdrop-blur-lg z-50 transform transition-transform duration-300 lg:hidden ${
+            toggle ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          {/* Close Button */}
+          <div className="flex items-center justify-between p-6 border-b border-accent-cyan/10">
+            <h2 className="text-white font-bold text-xl">Menu</h2>
             <img
-              src={toggle ? close : menu}
-              alt="menu"
-              className="w-[20px] h-[28px] object-contain cursor-pointer"
+              src={close}
+              alt="close"
+              className="w-[24px] h-[24px] object-contain cursor-pointer hover:brightness-125 transition-all duration-300"
               onClick={toggleMenu}
             />
           </div>
 
-          <div className="flex justify-center items-center h-full">
-            <div className="w-full p-4">
-              <ul className="list-none flex flex-col gap-6 items-center lg:hidden justify-center">
-                {navLinks.map((nav) => (
-                  <li
-                    key={nav.id}
-                    className={`font-poppins font-medium cursor-pointer text-[18px] ${
-                      active === nav.title ? "text-white" : "text-secondary"
-                    }`}
+          {/* Menu Items */}
+          <div className="flex flex-col gap-8 p-8 mt-8">
+            <ul className="list-none flex flex-col gap-6">
+              {navLinks.map((nav) => (
+                <li key={nav.id}>
+                  <a
+                    href={`#${nav.id}`}
                     onClick={() => {
                       toggleMenu();
                       setActive(nav.title);
                     }}
+                    className={`font-medium text-[18px] transition-all duration-300 block pb-2 relative group ${
+                      active === nav.title
+                        ? "text-accent-cyan"
+                        : "text-secondary hover:text-white"
+                    }`}
                   >
-                    <a href={`#${nav.id}`}>{nav.title}</a>
-                  </li>
-                ))}
-              </ul>
-              {/* Social media links */}
-              <div className="flex gap-4 mt-10 justify-center">
-                <div className="icon-container group relative">
-                  <a
-                    href="https://www.facebook.com/ahmadwaseempiracha/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white"
-                  >
-                    <FaFacebook size={24} />
+                    {nav.title}
+                    <span
+                      className={`absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-accent-cyan to-accent-violet transition-all duration-300 ${
+                        active === nav.title ? "w-full" : "w-0 group-hover:w-full"
+                      }`}
+                    ></span>
                   </a>
-                  <p className="opacity-0 group-hover:opacity-100 bg-black text-white text-sm rounded py-1 px-2 absolute top-[-30px] left-1/2 transform -translate-x-1/2 transition-opacity duration-300">
-                    Facebook
-                  </p>
-                </div>
-                <div className="icon-container group relative">
-                  <a
-                    href="https://instagram.com/ahmadpiracha"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white"
-                  >
-                    <FaInstagram size={24} />
-                  </a>
-                  <p className="opacity-0 group-hover:opacity-100 bg-black text-white text-sm rounded py-1 px-2 absolute top-[-30px] left-1/2 transform -translate-x-1/2 transition-opacity duration-300">
-                    Instagram
-                  </p>
-                </div>
-                <div className="icon-container group relative">
-                  <a
-                    href="https://www.linkedin.com/in/ahmad-waseem-piracha/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white"
-                  >
-                    <FaLinkedin size={24} />
-                  </a>
-                  <p className="opacity-0 group-hover:opacity-100 bg-black text-white text-sm rounded py-1 px-2 absolute top-[-30px] left-1/2 transform -translate-x-1/2 transition-opacity duration-300">
-                    LinkedIn
-                  </p>
-                </div>
-                <div className="icon-container group relative">
-                  <a
-                    href="https://wa.me/923061138468"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white"
-                  >
-                    <FaWhatsapp size={24} />
-                  </a>
-                  <p className="opacity-0 group-hover:opacity-100 bg-black text-white text-sm rounded py-1 px-2 absolute top-[-30px] left-1/2 transform -translate-x-1/2 transition-opacity duration-300">
-                    WhatsApp
-                  </p>
-                </div>
+                </li>
+              ))}
+            </ul>
+
+            {/* Social Icons */}
+            <div className="border-t border-accent-cyan/10 pt-8">
+              <p className="text-secondary text-sm mb-4">Connect with me</p>
+              <div className="flex gap-4 flex-wrap">
+                <a
+                  href="https://www.facebook.com/ahmadwaseempiracha/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-lg bg-black-100/50 hover:bg-accent-cyan/20 transition-all duration-300 group"
+                  title="Facebook"
+                >
+                  <FaFacebook size={20} className="text-secondary group-hover:text-accent-cyan transition-colors" />
+                </a>
+                <a
+                  href="https://instagram.com/ahmadpiracha"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-lg bg-black-100/50 hover:bg-accent-cyan/20 transition-all duration-300 group"
+                  title="Instagram"
+                >
+                  <FaInstagram size={20} className="text-secondary group-hover:text-accent-cyan transition-colors" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/ahmad-waseem-piracha/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-lg bg-black-100/50 hover:bg-accent-cyan/20 transition-all duration-300 group"
+                  title="LinkedIn"
+                >
+                  <FaLinkedin size={20} className="text-secondary group-hover:text-accent-cyan transition-colors" />
+                </a>
+                <a
+                  href="https://wa.me/923061138468"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-lg bg-black-100/50 hover:bg-accent-cyan/20 transition-all duration-300 group"
+                  title="WhatsApp"
+                >
+                  <FaWhatsapp size={20} className="text-secondary group-hover:text-accent-cyan transition-colors" />
+                </a>
               </div>
             </div>
           </div>

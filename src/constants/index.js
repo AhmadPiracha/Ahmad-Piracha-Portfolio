@@ -23,6 +23,7 @@ import {
     deadpool,
     linkspire,
     habitspark,
+    zones,
 } from "../assets";
 
 export const navLinks = [{
@@ -92,12 +93,23 @@ const technologies = {
     Tools: [{ name: "VS Code" }, { name: "Git" }, { name: "OpenAI" },]
 };
 
-const experiences = [{
+const experiences = [
+    {
+        title: "Senior Software Engineer",
+        company_name: "Zones LLC",
+        icon: zones,
+        iconBg: "#E6DEDD",
+        date: "Nov 2025 - Present",
+        points: [
+            "At Zones, LLC, I focused on delivering high-quality frontend solutions utilizing React and Angular. My role involved implementing scalable UI architectures and integrating them with .NET APIs and Contentful CMS. I also contributed to cloud-based deployments using Azure, which significantly improved performance and user experience across multiple projects."
+        ],
+    },
+    {
         title: "Software Engineer",
         company_name: "OpusAI",
         icon: opusai,
         iconBg: "#E6DEDD",
-        date: "Sep 2024 - Present",
+        date: "Sep 2024 - Sep 2025",
         points: [
             "At OpusAI, I contributed to a project by developing and optimizing enhanced user interfaces using React.js, Svelte.js and API functionality.",
             "I created REST APIs for downloading PDFs containing applicant data and Excel files listing applicants and other functionalities.",

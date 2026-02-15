@@ -118,142 +118,139 @@ const Contact = () => {
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] flex flex-col gap-6"
       >
         {/* Heading */}
-        <h3 className={styles.sectionHeadText}>Let's Connect.</h3>
+        <div>
+          <h3 className={styles.sectionHeadText}>Let's <span className="text-accent-cyan">Connect</span>.</h3>
+          <div className="h-1 w-16 bg-gradient-to-r from-accent-cyan to-accent-violet rounded-full mt-4"></div>
+        </div>
 
         {/* Description */}
-        <p className="text-white">
+        <p className="text-white leading-relaxed">
           Feel free to reach out to me through any of the social media links,
           email, or contact number below. I'd love to hear from you!
         </p>
-        {/* Social media links */}
-        <div className="flex gap-4 mt-5 justify-center">
-          <div className="icon-container group relative">
-            <a
-              href="https://www.facebook.com/ahmadwaseempiracha/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white"
-            >
-              <FaFacebook size={24} />
-            </a>
-            <p className="opacity-0 group-hover:opacity-100 bg-black text-white text-sm rounded py-1 px-2 absolute top-[-30px] left-1/2 transform -translate-x-1/2 transition-opacity duration-300">
-              Facebook
-            </p>
-          </div>
-          <div className="icon-container group relative">
-            <a
-              href="https://instagram.com/ahmadpiracha"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white"
-            >
-              <FaInstagram size={24} />
-            </a>
-            <p className="opacity-0 group-hover:opacity-100 bg-black text-white text-sm rounded py-1 px-2 absolute top-[-30px] left-1/2 transform -translate-x-1/2 transition-opacity duration-300">
-              Instagram
-            </p>
-          </div>
-          <div className="icon-container group relative">
-            <a
-              href="https://www.linkedin.com/in/ahmad-waseem-piracha/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white"
-            >
-              <FaLinkedin size={24} />
-            </a>
-            <p className="opacity-0 group-hover:opacity-100 bg-black text-white text-sm rounded py-1 px-2 absolute top-[-30px] left-1/2 transform -translate-x-1/2 transition-opacity duration-300">
-              LinkedIn
-            </p>
-          </div>
-          <div className="icon-container group relative">
-            <a
-              href="https://wa.me/923061138468"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white"
-            >
-              <FaWhatsapp size={24} />
-            </a>
-            <p className="opacity-0 group-hover:opacity-100 bg-black text-white text-sm rounded py-1 px-2 absolute top-[-30px] left-1/2 transform -translate-x-1/2 transition-opacity duration-300">
-              WhatsApp
-            </p>
-          </div>
-        </div>
 
-        {/* Email and contact number */}
-        <div className="flex justify-center gap-4">
-          <FaEnvelope size={24} className="text-white" />
-          <a href="mailto:ahmadpiracha3@gmail.com" className="text-white">
-            ahmadpiracha3@gmail.com
+        {/* Social media links */}
+        <div className="flex gap-4 mt-5">
+          <a
+            href="https://www.facebook.com/ahmadwaseempiracha/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 rounded-lg bg-black-100/50 hover:bg-accent-cyan/20 transition-all duration-300 group"
+            title="Facebook"
+          >
+            <FaFacebook size={24} className="text-secondary group-hover:text-accent-cyan transition-colors" />
+          </a>
+          <a
+            href="https://instagram.com/ahmadpiracha"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 rounded-lg bg-black-100/50 hover:bg-accent-cyan/20 transition-all duration-300 group"
+            title="Instagram"
+          >
+            <FaInstagram size={24} className="text-secondary group-hover:text-accent-cyan transition-colors" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ahmad-waseem-piracha/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 rounded-lg bg-black-100/50 hover:bg-accent-cyan/20 transition-all duration-300 group"
+            title="LinkedIn"
+          >
+            <FaLinkedin size={24} className="text-secondary group-hover:text-accent-cyan transition-colors" />
+          </a>
+          <a
+            href="https://wa.me/923061138468"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 rounded-lg bg-black-100/50 hover:bg-accent-cyan/20 transition-all duration-300 group"
+            title="WhatsApp"
+          >
+            <FaWhatsapp size={24} className="text-secondary group-hover:text-accent-cyan transition-colors" />
           </a>
         </div>
-        <div className="flex justify-center gap-4">
-          <FaPhone size={24} className="text-white" />
-          <span className="text-white">(+92) 306 1138468</span>
+
+        {/* Contact Info Cards */}
+        <div className="space-y-3 mt-6">
+          <div className="p-4 bg-black-100/30 rounded-lg flex items-center gap-3 hover:bg-accent-cyan/10 transition-all duration-300 border border-accent-violet/20">
+            <FaEnvelope className="text-accent-cyan text-xl" />
+            <a href="mailto:ahmadpiracha3@gmail.com" className="text-white hover:text-accent-cyan transition-colors">
+              ahmadpiracha3@gmail.com
+            </a>
+          </div>
+          <div className="p-4 bg-black-100/30 rounded-lg flex items-center gap-3 hover:bg-accent-cyan/10 transition-all duration-300 border border-accent-violet/20">
+            <FaPhone className="text-accent-cyan text-xl" />
+            <span className="text-white">(+92) 306 1138468</span>
+          </div>
         </div>
       </motion.div>
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
+        className="flex-[0.75] rounded-2xl overflow-hidden"
       >
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <div className="relative p-8 bg-black-100 border border-accent-violet/20">
+          <div className="relative z-10">
+            <p className={styles.sectionSubText}>Get in touch</p>
+            <h3 className={`${styles.sectionHeadText} text-accent-cyan`}>Contact.</h3>
 
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8"
-        >
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Name</span>
-            <input
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              placeholder="What's your good name?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-            />
-            {errors.name && <span className="text-red-500">{errors.name}</span>}
-          </label>
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your email</span>
-            <input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="What's your web address?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-            />
-            {errors.email && (
-              <span className="text-red-500">{errors.email}</span>
-            )}
-          </label>
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Message</span>
-            <textarea
-              rows={7}
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              placeholder="What you want to say?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-            />
-            {errors.message && (
-              <span className="text-red-500">{errors.message}</span>
-            )}
-          </label>
+            <form
+              ref={formRef}
+              onSubmit={handleSubmit}
+              className="mt-12 flex flex-col gap-8"
+            >
+              <label className="flex flex-col">
+                <span className="text-white font-medium mb-4">Your Name</span>
+                <input
+                  type="text"
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
+                  placeholder="What's your good name?"
+                  className="bg-black-200 py-3 px-4 placeholder:text-secondary text-white rounded-lg outline-none border border-accent-violet/20 focus:border-accent-cyan/50 focus:bg-black-200/80 transition-all duration-300 font-medium"
+                />
+                {errors.name && <span className="text-red-400 text-sm mt-2">{errors.name}</span>}
+              </label>
 
-          <button
-            type="submit"
-            className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
-          >
-            {loading ? "Sending..." : "Send"}
-          </button>
-        </form>
+              <label className="flex flex-col">
+                <span className="text-white font-medium mb-4">Your Email</span>
+                <input
+                  type="email"
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder="What's your web address?"
+                  className="bg-black-200 py-3 px-4 placeholder:text-secondary text-white rounded-lg outline-none border border-accent-violet/20 focus:border-accent-cyan/50 focus:bg-black-200/80 transition-all duration-300 font-medium"
+                />
+                {errors.email && (
+                  <span className="text-red-400 text-sm mt-2">{errors.email}</span>
+                )}
+              </label>
+
+              <label className="flex flex-col">
+                <span className="text-white font-medium mb-4">Your Message</span>
+                <textarea
+                  rows={7}
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
+                  placeholder="What you want to say?"
+                  className="bg-black-200 py-3 px-4 placeholder:text-secondary text-white rounded-lg outline-none border border-accent-violet/20 focus:border-accent-cyan/50 focus:bg-black-200/80 transition-all duration-300 font-medium resize-none"
+                />
+                {errors.message && (
+                  <span className="text-red-400 text-sm mt-2">{errors.message}</span>
+                )}
+              </label>
+
+              <button
+                type="submit"
+                className="group relative py-3 px-8 rounded-lg outline-none w-fit text-white font-bold overflow-hidden transition-all duration-300"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-accent-cyan to-accent-violet opacity-100 group-hover:opacity-90 transition-opacity duration-300"></div>
+                <span className="relative z-10">{loading ? "Sending..." : "Send Message"}</span>
+              </button>
+            </form>
+          </div>
+        </div>
       </motion.div>
     </div>
   );
