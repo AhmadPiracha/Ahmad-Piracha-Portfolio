@@ -12,6 +12,7 @@ import {
   Footer,
 } from './components';
 import BackgroundEffect from './components/BackgroundHoverEffect';
+import { Analytics } from "@vercel/analytics/next"
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
           <Contact />
         </div>
         <Footer />
+        <Analytics />
       </div>
     </BrowserRouter>
   );
