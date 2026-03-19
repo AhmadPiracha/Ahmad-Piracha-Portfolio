@@ -81,7 +81,6 @@ const Experience = () => {
             {experiences.map((experience, index) => (
               <SummaryCard
                 key={index}
-                experience={experience}
                 {...experience}
               />
             ))}
@@ -96,8 +95,8 @@ const Experience = () => {
 
         <div className="mt-10 flex flex-col">
           <VerticalTimeline>
-            {education.map((education, index) => (
-              <SummaryCard key={index} education={education} {...education} />
+            {education.map((edu, index) => (
+              <SummaryCard key={index} {...edu} />
             ))}
           </VerticalTimeline>
         </div>

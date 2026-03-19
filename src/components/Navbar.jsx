@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
@@ -14,19 +14,19 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   const [hideNavbar, setHideNavbar] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const SCROLL_THRESHOLD = 50; 
+  const lastScrollYRef = useRef(0);
+  const SCROLL_THRESHOLD = 50;
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      setHideNavbar(currentScrollY > lastScrollY && currentScrollY > SCROLL_THRESHOLD);
-      setLastScrollY(currentScrollY);
+      setHideNavbar(currentScrollY > lastScrollYRef.current && currentScrollY > SCROLL_THRESHOLD);
+      lastScrollYRef.current = currentScrollY;
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
   const toggleMenu = () => {
     setToggle(!toggle);
@@ -147,6 +147,7 @@ const Navbar = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-lg bg-black-100/50 hover:bg-accent-cyan/20 transition-all duration-300 group"
+                  aria-label="Visit Facebook profile"
                   title="Facebook"
                 >
                   <FaFacebook size={20} className="text-secondary group-hover:text-accent-cyan transition-colors" />
@@ -156,6 +157,7 @@ const Navbar = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-lg bg-black-100/50 hover:bg-accent-cyan/20 transition-all duration-300 group"
+                  aria-label="Visit Instagram profile"
                   title="Instagram"
                 >
                   <FaInstagram size={20} className="text-secondary group-hover:text-accent-cyan transition-colors" />
@@ -165,6 +167,7 @@ const Navbar = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-lg bg-black-100/50 hover:bg-accent-cyan/20 transition-all duration-300 group"
+                  aria-label="Visit LinkedIn profile"
                   title="LinkedIn"
                 >
                   <FaLinkedin size={20} className="text-secondary group-hover:text-accent-cyan transition-colors" />
@@ -174,6 +177,7 @@ const Navbar = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-lg bg-black-100/50 hover:bg-accent-cyan/20 transition-all duration-300 group"
+                  aria-label="Contact on WhatsApp"
                   title="WhatsApp"
                 >
                   <FaWhatsapp size={20} className="text-secondary group-hover:text-accent-cyan transition-colors" />

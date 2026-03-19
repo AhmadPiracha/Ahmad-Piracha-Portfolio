@@ -1,5 +1,4 @@
 import { styles } from "../styles";
-import { resume } from "../assets";
 import { ahmad } from "../assets";
 const Hero = () => {
   return (

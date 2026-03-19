@@ -1,17 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import styles from './BackgroundEffect.module.css';
 
 const BackgroundEffect = () => {
+  const lightRef = useRef(null);
   const [hoverPosition, setHoverPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
-      const circle = document.querySelector(`.${styles.light}`);
-      const circleSize = circle.offsetWidth;
-      const x = e.clientX - circleSize / 2;
-      const y = e.clientY - circleSize / 2;
-      setHoverPosition({ x, y });
+      if (!lightRef.current) return;
+      const circleSize = lightRef.current.offsetWidth;
+      setHoverPosition({ x: e.clientX - circleSize / 2, y: e.clientY - circleSize / 2 });
       setIsHovering(true);
     };
 
@@ -28,6 +27,7 @@ const BackgroundEffect = () => {
 
   return (
     <div
+      ref={lightRef}
       className={styles.light}
       style={{
         left: hoverPosition.x,
@@ -40,3 +40,4 @@ const BackgroundEffect = () => {
 };
 
 export default BackgroundEffect;
+

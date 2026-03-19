@@ -15,7 +15,7 @@ const CertificateCard = ({ index, name,tags, image, source_code_link }) => (
         <div >
       <div className="relative w-full h-full">
         <a href={source_code_link} target="_blank" rel="noopener noreferrer">
-          <img src={image} alt="certificate_image" className="w-full h-full object-cover rounded-2xl" />
+          <img src={image} alt={name} className="w-full h-full object-cover rounded-2xl" />
         </a>
       </div>
       <div className="mt-5">

@@ -22,9 +22,7 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className={`mt-4 text-secondary max-w-3xl
-          text-base sm:text-lg lg:text-xl   // Responsive text sizes
-        `}
+        className="mt-4 text-secondary max-w-3xl text-base sm:text-lg lg:text-xl"
       >
         "Experienced Software Engineer with a strong focus on frontend technologies,
         specializing in creating clean, user-friendly websites. Looking forward

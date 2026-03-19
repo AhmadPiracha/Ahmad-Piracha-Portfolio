@@ -1,4 +1,4 @@
-import { FaTwitter, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import {
     webDesign,
     MaintenanceIcon,
@@ -23,6 +23,9 @@ import {
     deadpool,
     linkspire,
     habitspark,
+    regretly,
+    flowapi,
+    reunio,
     zones,
 } from "../assets";
 
@@ -55,7 +58,7 @@ export const navLinks = [{
 const services = [{
         title: "Web Development",
         icon: web,
-        description: " From front-end to back-end development, I bring your website ideas to life using the latest web technologies. I strive to deliver efficient, scalable, and secure solutions tailored to your specific requirements.",
+        description: "From front-end to back-end development, I bring your website ideas to life using the latest web technologies. I strive to deliver efficient, scalable, and secure solutions tailored to your specific requirements.",
     },
     {
         title: "Web Design",
@@ -75,8 +78,9 @@ const services = [{
 ];
 
 const technologies = {
-    Programming_Languages: [
+    Languages: [
         { name: "JavaScript" },
+        { name: "TypeScript" },
         { name: "Python" },
         { name: "C++" },
         { name: "SQL" },
@@ -86,11 +90,23 @@ const technologies = {
         { name: "Next JS" },
         { name: "Node JS" },
         { name: "React Native" },
+        { name: "Angular" },
+        { name: "Svelte" },
         { name: "Tailwind CSS" },
         { name: "ShadCN" },
         { name: "Firebase" },
+        { name: "Supabase" },
     ],
-    Tools: [{ name: "VS Code" }, { name: "Git" }, { name: "OpenAI" },]
+    Tools: [
+        { name: "VS Code" },
+        { name: "Git & GitHub" },
+        { name: "Vercel" },
+        { name: "Azure" },
+        { name: "Figma" },
+        { name: "Jenkins CI/CD" },
+        { name: "Contentful CMS" },
+        { name: "OpenAI" },
+    ]
 };
 
 const experiences = [
@@ -204,6 +220,48 @@ const testimonials = [{
 
 const projects = [
     {
+        name: "Regretly",
+        description: "A digital wellness app that calculates a personalized 'Social Media Regret Score' — converting total screen time into missed opportunities like books unread, skills unlearned, income lost, and relationships neglected.",
+        tags: [
+            { name: "nextjs", color: "blue-text-gradient" },
+            { name: "typescript", color: "green-text-gradient" },
+            { name: "shadcn", color: "pink-text-gradient" },
+        ],
+        image: regretly,
+        gradientColors: ["#0f0c29", "#7c3aed"],
+        source_code_link: "", // TODO: add GitHub URL
+        live_link: "https://www.regretly.fun/",
+        featured: true,
+    },
+    {
+        name: "Flow API",
+        description: "A modern API visualization and conversion tool that transforms cURL, Fetch, HTTP, and HAR file inputs into interactive flow diagrams, with code generation across 7 programming languages.",
+        tags: [
+            { name: "nextjs", color: "blue-text-gradient" },
+            { name: "typescript", color: "green-text-gradient" },
+            { name: "shadcn", color: "pink-text-gradient" },
+        ],
+        image: flowapi,
+        gradientColors: ["#0f2027", "#00b4d8"],
+        source_code_link: "", // TODO: add GitHub URL
+        live_link: "https://flowapii.vercel.app/",
+        featured: true,
+    },
+    {
+        name: "Reunio",
+        description: "A school reunion social platform enabling alumni to reconnect with former classmates, browse a live newsfeed of friends' and groups' activities, and discover upcoming reunion events.",
+        tags: [
+            { name: "nextjs", color: "blue-text-gradient" },
+            { name: "firebase", color: "green-text-gradient" },
+            { name: "shadcn", color: "pink-text-gradient" },
+        ],
+        image: reunio,
+        gradientColors: ["#1a1a2e", "#c2185b"],
+        source_code_link: "", // TODO: add GitHub URL
+        live_link: "https://www.reunio.online/",
+        featured: true,
+    },
+    {
         name: "Marvel DeadPool",
         description: "An animated deadpool landing page with creative transitions for marvel fans using React and GSAP.",
         tags: [{
@@ -220,7 +278,8 @@ const projects = [
             },
         ],
         image: deadpool,
-        source_code_link: "https://marvel-deadpool.vercel.app/",
+        source_code_link: "https://github.com/AhmadPiracha/marvel-deadpool",
+        live_link: "https://marvel-deadpool.vercel.app/",
     },
     {
         name: "Reply Cortex",
@@ -240,6 +299,7 @@ const projects = [
         ],
         image: replyCortex,
         source_code_link: "https://github.com/AhmadPiracha/react-components",
+        live_link: "https://reply-cortex.vercel.app/",
     },
     {
         name: "Linkspire",
@@ -258,7 +318,8 @@ const projects = [
             },
         ],
         image: linkspire,
-        source_code_link: "https://linkspire-app.vercel.app/",
+        source_code_link: "https://github.com/AhmadPiracha/linkspire-app",
+        live_link: "https://linkspire-app.vercel.app/",
     },
     {
         name: "Habitspark",
@@ -277,7 +338,8 @@ const projects = [
             },
         ],
         image: habitspark,
-        source_code_link: "https://habitspark-app.vercel.app/add-habit",
+        source_code_link: "https://github.com/AhmadPiracha/habitspark-app",
+        live_link: "https://habitspark-app.vercel.app/",
     },
     {
         name: "Ahmad Piracha Portfolio",
@@ -297,6 +359,7 @@ const projects = [
         ],
         image: portfolio,
         source_code_link: "https://github.com/AhmadPiracha",
+        live_link: "https://ahmadpiracha.vercel.app/",
     },
     {
         name: "News App",
@@ -316,6 +379,7 @@ const projects = [
         ],
         image: newsApp,
         source_code_link: "https://github.com/AhmadPiracha/my-news-app",
+        live_link: "https://my-news-app.vercel.app/",
     },
     {
         name: "Job Villa",
@@ -382,21 +446,21 @@ const projects = [
 
 const certificates = [{
         name: "Meta - Advanced React",
-        description: "A web-based platform that allows users to view my portfolio made using React and Tailwind CSS",
+        description: "Covers advanced React patterns including hooks, context, performance optimization, and testing. Issued by Meta via Coursera.",
         tags: [{
                 name: "React",
                 color: "blue-text-gradient",
             },
             {
-                name: "Front-End Web Development",
+                name: "Front-End",
                 color: "pink-text-gradient",
             },
             {
-                name: "meta",
+                name: "Meta",
                 color: "green-text-gradient",
             },
             {
-                name: "coursera",
+                name: "Coursera",
                 color: "blue-text-gradient",
             },
         ],
@@ -405,21 +469,21 @@ const certificates = [{
     },
     {
         name: "Meta - Version Control",
-        description: "Web-based platform that allows users to watch news of their interest made using React and NewsAPI",
+        description: "Covers Git workflows, branching strategies, GitHub collaboration, and Linux command line fundamentals. Issued by Meta via Coursera.",
         tags: [{
-                name: "Version Control",
+                name: "Git",
                 color: "blue-text-gradient",
             },
             {
-                name: "Github",
+                name: "GitHub",
                 color: "pink-text-gradient",
             },
             {
-                name: "Web Development",
+                name: "Linux",
                 color: "green-text-gradient",
             },
             {
-                name: "Linux",
+                name: "Coursera",
                 color: "pink-text-gradient",
             },
         ],
@@ -428,17 +492,17 @@ const certificates = [{
     },
     {
         name: "React JS - Frontend Web Development",
-        description: "A web-based platform that allows users to screen themselves for COVID-19 symptoms and provides them with a risk assessment based on their responses.",
+        description: "Comprehensive React JS course covering components, hooks, state management, and building modern single-page applications. Issued by Udemy.",
         tags: [{
-                name: "reactjs",
+                name: "React JS",
                 color: "blue-text-gradient",
             },
             {
-                name: "jquery",
+                name: "JavaScript",
                 color: "green-text-gradient",
             },
             {
-                name: "JavaScript",
+                name: "Udemy",
                 color: "pink-text-gradient",
             },
         ],
@@ -447,17 +511,17 @@ const certificates = [{
     },
     {
         name: "Responsive Web Development",
-        description: "A web-based platform that allows users to perform various text operations such as converting text to uppercase, removing extra spaces, etc.",
+        description: "Covers HTML, CSS, Bootstrap, and responsive design principles for building mobile-first web applications. Issued by Udemy.",
         tags: [{
-                name: "react",
+                name: "HTML & CSS",
                 color: "blue-text-gradient",
             },
             {
-                name: "bootstrap",
+                name: "Bootstrap",
                 color: "green-text-gradient",
             },
             {
-                name: "css",
+                name: "Responsive",
                 color: "pink-text-gradient",
             },
         ],
@@ -466,11 +530,7 @@ const certificates = [{
     },
 ];
 
-const social = [{
-        name: "Twitter",
-        icon: FaTwitter,
-        link: "https://twitter.com/ahmadpiracha3",
-    },
+const social = [
     {
         name: "Instagram",
         icon: FaInstagram,
@@ -479,12 +539,7 @@ const social = [{
     {
         name: "LinkedIn",
         icon: FaLinkedin,
-        link: "https://www.linkedin.com/in/ahmad-piracha-1b1b3a1b2/",
-    },
-    {
-        name: "Github",
-        icon: FaGithub,
-        link: "https://www.github.com/AhmadPiracha",
+        link: "https://www.linkedin.com/in/ahmad-waseem-piracha/",
     },
 ];
 

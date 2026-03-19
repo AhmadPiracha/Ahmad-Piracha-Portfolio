@@ -7,14 +7,9 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-
 import nuces from "./nuces.png";
 import internsPak from "./internsPak.jpeg";
 import astechware from "./astechware-logo.jpg";
-import sportix from "./sportix-logo.png";
-import upwork from './upwork.svg';
 import opusai from './opusai.jpg';
 import zones from './Zones.jpg';
 
@@ -22,14 +17,16 @@ import newsApp from "./newsApp.png";
 import covidscreeningapp from "./covid-screening-app.png";
 import textApp from "./textApp.png";
 import portfolio from "./portfolio.png";
-import jobVilla from "./jobvilla.png"
+import jobVilla from "./jobvilla.png";
 import replyCortex from './slide1.png';
 import deadpool from './deadpool.jpg';
 import linkspire from './linkspire.jpg';
 import habitspark from './habitspark.jpg';
+import regretly from './regretly.png';
+import flowapi from './flowapi.png';
+import reunio from './reunio.png';
 
 import resume from "./company/Muhammad Ahmad Waseem - Resume.pdf";
-import profile from "./company/profile-pic.png";
 import ahmad from './ahmad.png';
 
 import advancedReact from "./certificates/Advanced React.png";
@@ -47,8 +44,6 @@ export {
     github,
     menu,
     close,
-    meta,
-    shopify,
     newsApp,
     covidscreeningapp,
     textApp,
@@ -58,15 +53,15 @@ export {
     deadpool,
     linkspire,
     habitspark,
+    regretly,
+    flowapi,
+    reunio,
     resume,
     nuces,
     internsPak,
     astechware,
-    sportix,
-    upwork,
     opusai,
     zones,
-    profile,
     advancedReact,
     reactJS,
     versionControl,

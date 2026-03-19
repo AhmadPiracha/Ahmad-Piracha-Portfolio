@@ -2,6 +2,7 @@
 /* eslint-disable react-refresh/only-export-components */
 
 import { motion } from "framer-motion";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import { styles } from "../styles";
 import { github } from "../assets";
 import { SectionWrapper } from "../higherOrderComponents";
@@ -9,30 +10,86 @@ import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { useState } from "react";
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
+const ProjectCard = ({
+  index,
+  name,
+  description,
+  tags,
+  image,
+  source_code_link,
+  live_link,
+  featured,
+  gradientColors,
+}) => {
+  const hasImage = image && image !== "";
+
   return (
-    <motion.div initial="hidden" animate="show" variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <div className="group relative rounded-2xl overflow-hidden card-hover sm:w-[360px] w-full border border-accent-violet/20 hover:border-accent-cyan/40 transition-all duration-300">
-        {/* Card Content */}
+    <motion.div
+      initial="hidden"
+      animate="show"
+      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+    >
+      <div className="group relative rounded-2xl overflow-hidden sm:w-[360px] w-full border border-accent-violet/20 hover:border-accent-cyan/40 transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,217,255,0.1)]">
+        {/* Featured badge */}
+        {featured && (
+          <div className="absolute top-3 left-3 z-20 px-2.5 py-0.5 bg-accent-cyan text-primary text-[10px] font-bold rounded-full uppercase tracking-widest">
+            Featured
+          </div>
+        )}
+
         <div className="relative z-10 bg-black-100 rounded-2xl">
-          {/* Image Container */}
+          {/* Image / Gradient Placeholder */}
           <div className="relative w-full h-[230px] rounded-t-xl overflow-hidden">
-            <img 
-              src={image} 
-              alt={name}
-              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-            />
-            
-            {/* Overlay with Github Link */}
-            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex justify-end items-end p-4 transition-all duration-300">
-              <a 
-                href={source_code_link} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-accent-cyan/20 hover:bg-accent-cyan/40 border border-accent-cyan/50 w-12 h-12 rounded-full flex justify-center items-center cursor-pointer transition-all duration-300 hover:scale-125"
+            {hasImage ? (
+              <img
+                src={image}
+                alt={name}
+                loading="lazy"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+            ) : (
+              <div
+                className="w-full h-full flex items-center justify-center"
+                style={{
+                  background: gradientColors
+                    ? `linear-gradient(135deg, ${gradientColors[0]}, ${gradientColors[1]})`
+                    : "linear-gradient(135deg, #1d1836, #151030)",
+                }}
               >
-                <img src={github} alt="source code" className="w-6 h-6 filter brightness-0 invert" />
-              </a>
+                <span className="text-7xl font-black text-white/20 select-none">
+                  {name[0]}
+                </span>
+              </div>
+            )}
+
+            {/* Hover overlay with links */}
+            <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex justify-end items-end p-4 gap-2 transition-all duration-300">
+              {live_link && (
+                <a
+                  href={live_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visit ${name} live site`}
+                  className="bg-accent-emerald/20 hover:bg-accent-emerald/40 border border-accent-emerald/60 w-10 h-10 rounded-full flex justify-center items-center transition-all duration-300 hover:scale-125"
+                >
+                  <FaExternalLinkAlt className="text-white w-4 h-4" />
+                </a>
+              )}
+              {source_code_link && (
+                <a
+                  href={source_code_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`View ${name} source code`}
+                  className="bg-accent-cyan/20 hover:bg-accent-cyan/40 border border-accent-cyan/50 w-10 h-10 rounded-full flex justify-center items-center transition-all duration-300 hover:scale-125"
+                >
+                  <img
+                    src={github}
+                    alt="source code"
+                    className="w-5 h-5 filter brightness-0 invert"
+                  />
+                </a>
+              )}
             </div>
           </div>
 
@@ -41,16 +98,18 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
             <h3 className="text-white font-bold text-[20px] group-hover:text-accent-cyan transition-colors duration-300">
               {name}
             </h3>
-            <p className="mt-2 text-secondary text-[14px] group-hover:text-white-100 transition-colors duration-300">
+            <p className="mt-2 text-secondary text-[14px] leading-relaxed group-hover:text-white-100 transition-colors duration-300">
               {description}
             </p>
 
             {/* Tags */}
             <div className="mt-4 flex flex-wrap gap-2">
               {tags.map((tag) => (
-                <span 
-                  key={`${name}-${tag.name}`} 
-                  className={`text-[12px] px-2 py-1 rounded-full bg-black-200 ${tag.color} font-medium group-hover:bg-black-100 transition-all duration-300`}
+                <span
+                  key={`${name}-${tag.name}`}
+                  className={`text-[12px] px-2 py-1 rounded-full bg-black-200 ${
+                    tag.color
+                  } font-medium group-hover:bg-black-100 transition-all duration-300`}
                 >
                   #{tag.name}
                 </span>
