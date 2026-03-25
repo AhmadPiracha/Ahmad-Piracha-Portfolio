@@ -26,7 +26,7 @@ import regretly from './regretly.png';
 import flowapi from './flowapi.png';
 import reunio from './reunio.png';
 
-import resume from "./company/Muhammad Ahmad Waseem - Resume.pdf";
+import resume from "./company/Ahmad Waseem - Software Engineer.pdf";
 import ahmad from './ahmad.png';
 
 import advancedReact from "./certificates/Advanced React.png";

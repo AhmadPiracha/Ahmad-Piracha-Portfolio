@@ -1,5 +1,5 @@
 import { styles } from "../styles";
-import { ahmad } from "../assets";
+import { ahmad, resume } from "../assets";
 const Hero = () => {
   return (
     <>
@@ -28,8 +28,8 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-accent-cyan to-accent-violet opacity-100 group-hover:opacity-90 transition-opacity duration-300"></div>
                 <span className="relative z-10">View My Work</span>
               </a>
-              <a href="#contact" className="px-8 py-3 text-accent-cyan font-semibold rounded-lg border-2 border-accent-cyan hover:bg-accent-cyan/10 transition-all duration-300">
-                Get in Touch
+              <a href={resume} target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-transparent text-accent-cyan font-semibold rounded-lg border-2 border-accent-cyan hover:bg-accent-cyan/10 transition-all duration-300">
+                Resume
               </a>
             </div>
           </div>
