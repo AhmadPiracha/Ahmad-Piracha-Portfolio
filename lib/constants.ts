@@ -147,7 +147,7 @@ export const projects: Project[] = [
       { name: "tailwind" },
       { name: "tesseract.js" },
     ],
-    image: "/images/projects/leakshot.png",
+    image: "/images/projects/LeakShot.png",
     source_code_link: "",
     live_link: "https://leakshott.vercel.app/",
     featured: true,
