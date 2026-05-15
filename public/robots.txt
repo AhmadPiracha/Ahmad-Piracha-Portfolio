@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://ahmadpiracha.vercel.app/sitemap.xml
