@@ -7,8 +7,34 @@ const _inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const _jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains-mono" });
 
 export const metadata: Metadata = {
-  title: 'Ahmad Piracha | Software Engineer',
-  description: 'Software Engineer with 3+ years of experience building scalable web and mobile applications. Focused on performance, clean architecture, and exceptional user experiences.',
+  metadataBase: new URL('https://ahmadpiracha.vercel.app'),
+  title: 'Ahmad Piracha - Frontend & Product Engineer',
+  description:
+    'Frontend/Product Engineer building SaaS tools, developer utilities, Chrome extensions, and polished web apps with React, Next.js, and TypeScript.',
+  openGraph: {
+    title: 'Ahmad Piracha - Frontend & Product Engineer',
+    description:
+      'I build polished SaaS tools, developer utilities, and launch-ready web apps using React, Next.js, TypeScript, and modern UI systems.',
+    url: 'https://ahmadpiracha.vercel.app',
+    siteName: 'Ahmad Piracha',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Ahmad Piracha Portfolio',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ahmad Piracha - Frontend & Product Engineer',
+    description:
+      'Frontend/Product Engineer building SaaS tools, developer utilities, and polished web apps.',
+    images: ['/og-image.png'],
+  },
   icons: {
     icon: '/images/logo.svg',
   },

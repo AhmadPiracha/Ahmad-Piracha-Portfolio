@@ -6,7 +6,16 @@ import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { useInView } from "@/hooks/use-in-view";
 import { projects, type Project } from "@/lib/constants";
 
-const filters = ["All", "Featured", "React", "Next.js", "TypeScript"] as const;
+const filters = [
+  "All",
+  "Featured",
+  "SaaS",
+  "Developer Tools",
+  "Chrome Extensions",
+  "Frontend",
+  "Full Stack",
+  "UI Animation",
+] as const;
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -58,19 +67,59 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       <div className="p-5">
         <div className="flex items-start justify-between gap-2">
           <h3 className="text-foreground font-semibold text-base group-hover:text-accent transition-colors">{project.name}</h3>
-          {project.live_link && (
-            <a href={project.live_link} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors flex-shrink-0 mt-0.5" aria-label={`Visit ${project.name}`}>
-              <FaExternalLinkAlt size={12} />
-            </a>
-          )}
         </div>
-        <p className="mt-2 text-muted text-sm leading-relaxed line-clamp-3">{project.description}</p>
+        <p className="mt-1 text-muted-foreground text-xs font-mono">
+          {project.positioning}
+        </p>
+        <p className="mt-4 text-muted text-sm leading-relaxed line-clamp-3">{project.description}</p>
+
+        <div className="mt-4 rounded-lg border border-card-border bg-surface p-3">
+          <p className="text-[11px] font-mono uppercase tracking-wider text-accent">
+            Problem
+          </p>
+          <p className="mt-1 text-xs text-muted leading-relaxed line-clamp-2">
+            {project.problem}
+          </p>
+          <p className="mt-3 text-[11px] font-mono uppercase tracking-wider text-accent">
+            Key feature
+          </p>
+          <p className="mt-1 text-xs text-muted leading-relaxed line-clamp-2">
+            {project.keyFeature}
+          </p>
+        </div>
+
         <div className="mt-4 flex flex-wrap gap-1.5">
-          {project.tags.map((tag) => (
-            <span key={`${project.name}-${tag.name}`} className="text-[11px] font-mono px-2 py-0.5 rounded-md bg-surface text-muted-foreground border border-card-border">
-              {tag.name}
+          {project.trustDetails.map((detail) => (
+            <span key={`${project.name}-${detail}`} className="text-[10px] px-2 py-1 rounded-md bg-accent-muted text-accent border border-accent/10">
+              {detail}
             </span>
           ))}
+        </div>
+
+        <div className="mt-4 flex flex-wrap gap-1.5">
+          {project.stack.map((tech) => (
+            <span key={`${project.name}-${tech}`} className="text-[11px] font-mono px-2 py-0.5 rounded-md bg-surface text-muted-foreground border border-card-border">
+              {tech}
+            </span>
+          ))}
+        </div>
+
+        <div className="mt-5 flex flex-wrap gap-2">
+          {project.live_link && (
+            <a href={project.live_link} target="_blank" rel="noopener noreferrer" className="px-3 py-2 rounded-md bg-accent text-accent-foreground text-xs font-medium hover:bg-accent/90 transition-colors">
+              Live Demo
+            </a>
+          )}
+          {project.caseStudySlug && (
+            <a href={`/projects/${project.caseStudySlug}`} className="px-3 py-2 rounded-md border border-card-border text-foreground text-xs font-medium hover:bg-surface transition-colors">
+              Case Study
+            </a>
+          )}
+          {project.source_code_link && (
+            <a href={project.source_code_link} target="_blank" rel="noopener noreferrer" className="px-3 py-2 rounded-md border border-card-border text-muted text-xs font-medium hover:text-foreground hover:bg-surface transition-colors">
+              GitHub
+            </a>
+          )}
         </div>
       </div>
     </div>
@@ -85,12 +134,7 @@ export default function Projects() {
 
   const filteredProjects = projects.filter((project) => {
     if (activeFilter === "All") return true;
-    if (activeFilter === "Featured") return project.featured;
-    return project.tags.some(
-      (tag) =>
-        tag.name.toLowerCase().includes(activeFilter.toLowerCase()) ||
-        (activeFilter === "Next.js" && tag.name.toLowerCase() === "nextjs")
-    );
+    return project.categories.includes(activeFilter);
   });
 
   const handleLoadMore = () => {
@@ -130,13 +174,7 @@ export default function Projects() {
                 <span className="ml-1.5 text-xs opacity-60">
                   {filter === "Featured"
                     ? projects.filter((p) => p.featured).length
-                    : projects.filter((p) =>
-                        p.tags.some(
-                          (t) =>
-                            t.name.toLowerCase().includes(filter.toLowerCase()) ||
-                            (filter === "Next.js" && t.name.toLowerCase() === "nextjs")
-                        )
-                      ).length}
+                    : projects.filter((p) => p.categories.includes(filter)).length}
                 </span>
               )}
             </button>

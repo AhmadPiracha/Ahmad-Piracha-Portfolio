@@ -2,7 +2,15 @@
 
 import { useRef, useState } from "react";
 import { useInView } from "@/hooks/use-in-view";
-import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from "react-icons/fa";
+import { FaGithub, FaEnvelope, FaPhone } from "react-icons/fa";
+
+const bestFor = [
+  "SaaS UI",
+  "Frontend MVPs",
+  "Developer tools",
+  "Chrome extensions",
+  "React/Next.js work",
+];
 
 export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -51,9 +59,30 @@ export default function Contact() {
 
         <div className="mt-10 flex flex-col lg:flex-row gap-12">
           <div className={`flex-1 flex flex-col gap-6 transition-all duration-700 delay-100 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
-            <p className="text-muted text-base leading-relaxed max-w-md">
-              {"I'd love to hear from you. Whether you have a project in mind, a question, or just want to connect -- feel free to reach out."}
+            <p className="text-foreground text-xl font-semibold leading-snug max-w-md">
+              Have a frontend-heavy SaaS, dashboard, developer tool, or MVP
+              idea?
             </p>
+            <p className="text-muted text-base leading-relaxed max-w-md">
+              I can help turn it into a clean, fast, and production-ready
+              interface.
+            </p>
+
+            <div>
+              <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
+                Best for
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {bestFor.map((item) => (
+                  <span
+                    key={item}
+                    className="px-3 py-1.5 rounded-md border border-card-border bg-card text-xs text-muted"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
 
             <div className="flex flex-col gap-3 mt-2">
               <a href="mailto:ahmadpiracha3@gmail.com" className="flex items-center gap-3 text-muted hover:text-foreground transition-colors group">
@@ -71,11 +100,17 @@ export default function Contact() {
             </div>
 
             <div className="flex items-center gap-3 mt-4">
+              <a href="mailto:ahmadpiracha3@gmail.com" className="px-4 py-2 rounded-lg bg-accent text-accent-foreground text-sm font-medium hover:bg-accent/90 transition-colors">
+                Email Me
+              </a>
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-lg border border-card-border text-sm text-foreground hover:bg-card transition-colors">
+                Download Resume
+              </a>
+              <a href="https://www.linkedin.com/in/ahmad-waseem-piracha/" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-lg border border-card-border text-sm text-foreground hover:bg-card transition-colors">
+                LinkedIn
+              </a>
               <a href="https://github.com/AhmadPiracha" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-lg bg-card border border-card-border flex items-center justify-center text-muted hover:text-foreground hover:border-accent/30 transition-colors" aria-label="GitHub">
                 <FaGithub size={16} />
-              </a>
-              <a href="https://www.linkedin.com/in/ahmad-waseem-piracha/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-lg bg-card border border-card-border flex items-center justify-center text-muted hover:text-foreground hover:border-accent/30 transition-colors" aria-label="LinkedIn">
-                <FaLinkedin size={16} />
               </a>
             </div>
           </div>

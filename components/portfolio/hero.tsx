@@ -2,6 +2,16 @@
 
 import Image from "next/image";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { stats } from "@/lib/constants";
+
+const heroBadges = [
+  "React",
+  "Next.js",
+  "TypeScript",
+  "SaaS UI",
+  "Developer Tools",
+  "Product Engineering",
+];
 
 export default function Hero() {
   return (
@@ -24,14 +34,25 @@ export default function Hero() {
             </h1>
 
             <p className="font-mono text-accent text-sm uppercase tracking-widest mb-6">
-              Software Engineer
+              Frontend & Product Engineer
             </p>
 
             <p className="text-muted text-lg leading-relaxed max-w-lg mb-10">
-              Software Engineer with 3+ years of experience building scalable
-              web and mobile applications. Focused on performance, clean
-              architecture, and exceptional user experiences.
+              I build polished SaaS tools, developer utilities, and
+              launch-ready web apps using React, Next.js, TypeScript, and
+              modern UI systems.
             </p>
+
+            <div className="flex flex-wrap gap-2 justify-center lg:justify-start mb-8">
+              {heroBadges.map((badge) => (
+                <span
+                  key={badge}
+                  className="px-3 py-1.5 rounded-md border border-card-border bg-card text-xs font-mono text-muted-foreground"
+                >
+                  {badge}
+                </span>
+              ))}
+            </div>
 
             <div className="flex items-center gap-4 flex-wrap justify-center lg:justify-start">
               <a
@@ -46,7 +67,13 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="px-6 py-3 border border-card-border text-foreground font-medium text-sm rounded-lg hover:bg-card hover:border-muted-foreground/30 transition-colors"
               >
-                Resume
+                Download Resume
+              </a>
+              <a
+                href="#contact"
+                className="px-2 py-3 text-muted hover:text-foreground font-medium text-sm transition-colors"
+              >
+                Contact Me
               </a>
             </div>
 
@@ -98,6 +125,22 @@ export default function Hero() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="mt-20 grid grid-cols-2 lg:grid-cols-4 border border-card-border bg-card/60 backdrop-blur rounded-xl overflow-hidden animate-fade-in-up animation-delay-200">
+          {stats.map((stat) => (
+            <div
+              key={stat.label}
+              className="p-5 sm:p-6 border-card-border odd:border-r lg:border-r last:border-r-0 border-b lg:border-b-0"
+            >
+              <p className="font-mono text-2xl sm:text-3xl font-bold text-foreground">
+                {stat.value}
+              </p>
+              <p className="mt-1 text-xs sm:text-sm text-muted-foreground">
+                {stat.label}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
 
