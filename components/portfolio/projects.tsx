@@ -172,11 +172,10 @@ export default function Projects() {
             <button
               key={filter}
               onClick={() => handleFilterChange(filter)}
-              className={`px-4 py-2 text-sm font-medium rounded-lg border transition-all duration-200 ${
-                activeFilter === filter
+              className={`px-4 py-2 text-sm font-medium rounded-lg border transition-all duration-200 ${activeFilter === filter
                   ? "bg-accent text-accent-foreground border-accent"
                   : "bg-card text-muted border-card-border hover:text-foreground hover:border-accent/30"
-              }`}
+                }`}
             >
               {filter}
               {filter !== "All" && (
