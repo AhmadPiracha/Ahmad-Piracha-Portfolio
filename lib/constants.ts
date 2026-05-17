@@ -193,31 +193,32 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    name: "ColorProof",
+    name: "RoamApply",
     description:
-      "ColorProof is a Chrome extension for frontend developers that scans webpages for color accessibility issues, simulates color blindness, and suggests copy-paste fixes for Tailwind, shadcn/ui, and CSS.",
-    positioning: "Color accessibility testing for frontend developers",
-    problem: "Developers need fast accessibility feedback without leaving the browser or translating results into code manually.",
-    keyFeature: "WCAG checks, color blindness simulation, and Tailwind/shadcn/CSS fix suggestions.",
-    stack: ["React", "TypeScript", "Chrome Extension", "WCAG"],
+      "RoamApply is a secure job search CRM for tracking global applications, recruiter outreach, follow-up dates, role notes, and search metrics in one private workspace.",
+    positioning: "Job tracker and recruiter outreach workspace",
+    problem: "International job searches quickly spread across saved links, spreadsheets, recruiter notes, and missed follow-up dates.",
+    keyFeature: "Application pipeline, recruiter CRM, follow-up rhythm, search metrics, and user-owned exports.",
+    stack: ["Next.js", "TypeScript", "Supabase", "Tailwind"],
     featureBullets: [
-      "WCAG contrast checks",
-      "Color blindness simulation",
-      "Tailwind/shadcn fix suggestions",
-      "Developer-focused browser workflow",
+      "Application pipeline tracking",
+      "Recruiter CRM",
+      "Follow-up date management",
+      "Search metrics dashboard",
+      "User-owned exports",
     ],
-    trustDetails: ["Chrome Extension", "WCAG", "Tailwind/shadcn fixes"],
-    categories: ["Featured", "Developer Tools", "Chrome Extensions", "Frontend"],
-    caseStudySlug: "colorproof",
+    trustDetails: ["Secure workspace", "Supabase auth", "Production deployed"],
+    categories: ["Featured", "SaaS", "Frontend", "Full Stack"],
+    caseStudySlug: "roamapply",
     tags: [
-      { name: "react" },
+      { name: "nextjs" },
       { name: "typescript" },
-      { name: "chrome-extension" },
-      { name: "wcag" },
+      { name: "supabase" },
+      { name: "tailwind" },
     ],
-    image: "/images/projects/colorproof.png",
+    image: "/images/projects/RoamApply1.png",
     source_code_link: "",
-    live_link: "https://colorproof.vercel.app/",
+    live_link: "https://roamapply.vercel.app/",
     featured: true,
   },
   {
@@ -269,6 +270,34 @@ export const projects: Project[] = [
     image: "/images/projects/flowapi.png",
     source_code_link: "",
     live_link: "https://flowapii.vercel.app/",
+    featured: true,
+  },
+  {
+    name: "ColorProof",
+    description:
+      "ColorProof is a Chrome extension for frontend developers that scans webpages for color accessibility issues, simulates color blindness, and suggests copy-paste fixes for Tailwind, shadcn/ui, and CSS.",
+    positioning: "Color accessibility testing for frontend developers",
+    problem: "Developers need fast accessibility feedback without leaving the browser or translating results into code manually.",
+    keyFeature: "WCAG checks, color blindness simulation, and Tailwind/shadcn/CSS fix suggestions.",
+    stack: ["React", "TypeScript", "Chrome Extension", "WCAG"],
+    featureBullets: [
+      "WCAG contrast checks",
+      "Color blindness simulation",
+      "Tailwind/shadcn fix suggestions",
+      "Developer-focused browser workflow",
+    ],
+    trustDetails: ["Chrome Extension", "WCAG", "Tailwind/shadcn fixes"],
+    categories: ["Featured", "Developer Tools", "Chrome Extensions", "Frontend"],
+    caseStudySlug: "colorproof",
+    tags: [
+      { name: "react" },
+      { name: "typescript" },
+      { name: "chrome-extension" },
+      { name: "wcag" },
+    ],
+    image: "/images/projects/colorproof.png",
+    source_code_link: "",
+    live_link: "https://colorproof.vercel.app/",
     featured: true,
   },
   {
@@ -585,6 +614,39 @@ export const projectCaseStudies = {
     ],
     links: {
       live: "https://colorproof.vercel.app/",
+      github: "",
+    },
+  },
+  roamapply: {
+    title: "RoamApply",
+    overview:
+      "RoamApply is a secure job search CRM for global applications and recruiter follow-ups. It gives job seekers a private workspace for tracking saved roles, applications, outreach, notes, follow-up dates, and search metrics.",
+    problem:
+      "A serious international job search quickly becomes scattered across browser bookmarks, spreadsheets, recruiter DMs, compensation notes, and missed follow-up reminders.",
+    solution:
+      "RoamApply turns the job search into a focused pipeline with application stages, recruiter records, next actions, analytics, and user-owned exports in one authenticated workspace.",
+    features: [
+      "Application pipeline for saved, applied, interview, rejected, and offer stages",
+      "Recruiter CRM with contact links, notes, and follow-up dates",
+      "Search metrics for application volume, response rate, interviews, and status distribution",
+      "Global role context for locations, remote roles, relocation notes, and compensation ranges",
+      "User-owned exports for keeping a private backup",
+    ],
+    technical:
+      "The product uses a Next.js and TypeScript frontend with Supabase authentication and protected user workspace data. The interface is structured around dashboard views for jobs, recruiters, outreach, interviews, analytics, and resources.",
+    ux:
+      "The experience is intentionally manual and disciplined: add a role, move it through the pipeline, record recruiter context, and keep the next follow-up visible. The product avoids scraping, auto-apply flows, and mass messaging so the workflow stays trustworthy.",
+    challenges:
+      "The main challenge is keeping a dense job-search CRM clear enough for daily use while still capturing the details that matter across international roles, recruiters, compensation, and follow-up timing.",
+    result:
+      "Users can turn saved jobs into a working system, keep every next action visible, and manage a global application pipeline without falling back to a messy spreadsheet.",
+    screenshots: [
+      "/images/projects/RoamApply1.png",
+      "/images/projects/RoamApply1.png",
+      "/images/projects/RoamApply1.png",
+    ],
+    links: {
+      live: "https://roamapply.vercel.app/",
       github: "",
     },
   },
