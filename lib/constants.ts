@@ -8,10 +8,10 @@ export const navLinks = [
 ];
 
 export const stats = [
-  { value: "4+ yrs", label: "Professional Experience" },
+  { value: "4 yrs", label: "Professional Experience" },
   { value: "20+", label: "Projects Shipped" },
   { value: "3+", label: "Companies Worked With" },
-  { value: "100%", label: "Frontend/Product Focus" },
+  { value: "Product-focused", label: "Frontend Engineering" },
 ];
 
 export const services = [
@@ -82,7 +82,7 @@ export const technologies: Record<string, { name: string }[]> = {
 
 export const experiences = [
   {
-    title: "Senior Software Engineer",
+    title: "Software Engineer - Frontend",
     company_name: "Zones LLC",
     icon: "/images/company/Zones.jpg",
     date: "Nov 2025 - Present",
@@ -107,7 +107,7 @@ export const experiences = [
     title: "Associate Software Engineer",
     company_name: "Astechware",
     icon: "/images/company/astechware-logo.jpg",
-    date: "Jun 2022 - Aug 2024",
+    date: "Oct 2023 - Aug 2024",
     points: [
       "Built full-stack applications using Ruby on Rails and React.js, including responsive frontend flows and interactive product screens.",
       "Implemented secure Stripe payment flows for web applications.",
@@ -556,38 +556,38 @@ export const projectCaseStudies = {
       github: "",
     },
   },
-  // colorproof: {
-  //   title: "ColorProof",
-  //   overview:
-  //     "ColorProof is a Chrome extension for frontend developers that scans webpages for color accessibility issues, simulates color blindness, and suggests copy-paste fixes for Tailwind, shadcn/ui, and CSS.",
-  //   problem:
-  //     "Accessibility checks are often separated from day-to-day frontend work, making it easy to miss contrast problems until late QA or after release.",
-  //   solution:
-  //     "ColorProof brings scanning, simulation, and practical fix suggestions into the browser so developers can identify and resolve issues while reviewing the actual page.",
-  //   features: [
-  //     "WCAG contrast checks",
-  //     "Color blindness simulation",
-  //     "Tailwind/shadcn/ui fix suggestions",
-  //     "Developer-focused browser workflow",
-  //   ],
-  //   technical:
-  //     "The extension combines a React and TypeScript UI with page scanning logic tailored to frontend workflows. The fix suggestions are shaped for common styling systems instead of generic color advice.",
-  //   ux:
-  //     "The UI prioritizes scan results, visual previews, and quick code fixes so developers can move from issue to action without context switching.",
-  //   challenges:
-  //     "The main challenge is translating accessibility findings into fixes that feel useful for real design systems and not just theoretical contrast numbers.",
-  //   result:
-  //     "Developers can test a live webpage, understand how color choices affect users, and apply practical Tailwind, shadcn/ui, or CSS fixes faster.",
-  //   screenshots: [
-  //     "/images/projects/colorproof.png",
-  //     "/images/projects/colorproof.png",
-  //     "/images/projects/colorproof.png",
-  //   ],
-  //   links: {
-  //     live: "https://colorproof.vercel.app/",
-  //     github: "",
-  //   },
-  // },
+  colorproof: {
+    title: "ColorProof",
+    overview:
+      "ColorProof is a Chrome extension for frontend developers that scans webpages for color accessibility issues, simulates color blindness, and suggests copy-paste fixes for Tailwind, shadcn/ui, and CSS.",
+    problem:
+      "Accessibility checks are often separated from day-to-day frontend work, making it easy to miss contrast problems until late QA or after release.",
+    solution:
+      "ColorProof brings scanning, simulation, and practical fix suggestions into the browser so developers can identify and resolve issues while reviewing the actual page.",
+    features: [
+      "WCAG contrast checks",
+      "Color blindness simulation",
+      "Tailwind/shadcn/ui fix suggestions",
+      "Developer-focused browser workflow",
+    ],
+    technical:
+      "The extension combines a React and TypeScript UI with page scanning logic tailored to frontend workflows. The fix suggestions are shaped for common styling systems instead of generic color advice.",
+    ux:
+      "The UI prioritizes scan results, visual previews, and quick code fixes so developers can move from issue to action without context switching.",
+    challenges:
+      "The main challenge is translating accessibility findings into fixes that feel useful for real design systems and not just theoretical contrast numbers.",
+    result:
+      "Developers can test a live webpage, understand how color choices affect users, and apply practical Tailwind, shadcn/ui, or CSS fixes faster.",
+    screenshots: [
+      "/images/projects/colorproof.png",
+      "/images/projects/colorproof.png",
+      "/images/projects/colorproof.png",
+    ],
+    links: {
+      live: "https://colorproof.vercel.app/",
+      github: "",
+    },
+  },
   regretly: {
     title: "Regretly",
     overview:

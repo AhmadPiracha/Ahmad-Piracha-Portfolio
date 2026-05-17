@@ -22,7 +22,7 @@ export default function About() {
         <div className="mt-8">
           <div className={`max-w-3xl transition-all duration-700 delay-100 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
             <p className="text-muted text-lg leading-relaxed">
-              I&apos;m a Frontend/Product Engineer with 4+ years of experience
+              I&apos;m a Frontend/Product Engineer with 4 years of experience
               building scalable web and mobile applications using React,
               Next.js, React Native, Angular, and TypeScript.
             </p>
