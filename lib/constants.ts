@@ -8,7 +8,7 @@ export const navLinks = [
 ];
 
 export const stats = [
-  { value: "3+ yrs", label: "Professional Experience" },
+  { value: "4+ yrs", label: "Professional Experience" },
   { value: "20+", label: "Projects Shipped" },
   { value: "3+", label: "Companies Worked With" },
   { value: "100%", label: "Frontend/Product Focus" },
@@ -150,7 +150,8 @@ export interface Project {
   categories: string[];
   caseStudySlug?: string;
   tags: { name: string }[];
-  image: string | null;
+  image?: string | null;
+  images?: string[];
   source_code_link: string;
   live_link?: string;
   featured?: boolean;
@@ -181,7 +182,12 @@ export const projects: Project[] = [
       { name: "tailwind" },
       { name: "tesseract.js" },
     ],
-    image: "/images/projects/LeakShot.png",
+    image: "/images/projects/LeakShot1.png",
+    images: [
+      "/images/projects/LeakShot1.png",
+      "/images/projects/LeakShot2.png",
+      "/images/projects/LeakShot3.png",
+    ],
     source_code_link: "",
     live_link: "https://leakshott.vercel.app/",
     featured: true,
@@ -232,7 +238,12 @@ export const projects: Project[] = [
     categories: ["Featured", "SaaS", "Frontend"],
     caseStudySlug: "regretly",
     tags: [{ name: "nextjs" }, { name: "typescript" }, { name: "shadcn" }],
-    image: "/images/projects/regretly.png",
+    image: "/images/projects/regretly1.png",
+    images: [
+      "/images/projects/regretly1.png",
+      "/images/projects/regretly2.png",
+      "/images/projects/regretly3.png",
+    ],
     source_code_link: "",
     live_link: "https://www.regretly.fun/",
     featured: true,
@@ -536,47 +547,47 @@ export const projectCaseStudies = {
     result:
       "Users can inspect screenshots, catch sensitive details, redact risky areas, and export a safer image without sending private content to a server.",
     screenshots: [
-      "/images/projects/LeakShot.png",
-      "/images/projects/LeakShot.png",
-      "/images/projects/LeakShot.png",
+      "/images/projects/LeakShot1.png",
+      "/images/projects/LeakShot2.png",
+      "/images/projects/LeakShot3.png",
     ],
     links: {
       live: "https://leakshott.vercel.app/",
       github: "",
     },
   },
-  colorproof: {
-    title: "ColorProof",
-    overview:
-      "ColorProof is a Chrome extension for frontend developers that scans webpages for color accessibility issues, simulates color blindness, and suggests copy-paste fixes for Tailwind, shadcn/ui, and CSS.",
-    problem:
-      "Accessibility checks are often separated from day-to-day frontend work, making it easy to miss contrast problems until late QA or after release.",
-    solution:
-      "ColorProof brings scanning, simulation, and practical fix suggestions into the browser so developers can identify and resolve issues while reviewing the actual page.",
-    features: [
-      "WCAG contrast checks",
-      "Color blindness simulation",
-      "Tailwind/shadcn/ui fix suggestions",
-      "Developer-focused browser workflow",
-    ],
-    technical:
-      "The extension combines a React and TypeScript UI with page scanning logic tailored to frontend workflows. The fix suggestions are shaped for common styling systems instead of generic color advice.",
-    ux:
-      "The UI prioritizes scan results, visual previews, and quick code fixes so developers can move from issue to action without context switching.",
-    challenges:
-      "The main challenge is translating accessibility findings into fixes that feel useful for real design systems and not just theoretical contrast numbers.",
-    result:
-      "Developers can test a live webpage, understand how color choices affect users, and apply practical Tailwind, shadcn/ui, or CSS fixes faster.",
-    screenshots: [
-      "/images/projects/colorproof.png",
-      "/images/projects/colorproof.png",
-      "/images/projects/colorproof.png",
-    ],
-    links: {
-      live: "https://colorproof.vercel.app/",
-      github: "",
-    },
-  },
+  // colorproof: {
+  //   title: "ColorProof",
+  //   overview:
+  //     "ColorProof is a Chrome extension for frontend developers that scans webpages for color accessibility issues, simulates color blindness, and suggests copy-paste fixes for Tailwind, shadcn/ui, and CSS.",
+  //   problem:
+  //     "Accessibility checks are often separated from day-to-day frontend work, making it easy to miss contrast problems until late QA or after release.",
+  //   solution:
+  //     "ColorProof brings scanning, simulation, and practical fix suggestions into the browser so developers can identify and resolve issues while reviewing the actual page.",
+  //   features: [
+  //     "WCAG contrast checks",
+  //     "Color blindness simulation",
+  //     "Tailwind/shadcn/ui fix suggestions",
+  //     "Developer-focused browser workflow",
+  //   ],
+  //   technical:
+  //     "The extension combines a React and TypeScript UI with page scanning logic tailored to frontend workflows. The fix suggestions are shaped for common styling systems instead of generic color advice.",
+  //   ux:
+  //     "The UI prioritizes scan results, visual previews, and quick code fixes so developers can move from issue to action without context switching.",
+  //   challenges:
+  //     "The main challenge is translating accessibility findings into fixes that feel useful for real design systems and not just theoretical contrast numbers.",
+  //   result:
+  //     "Developers can test a live webpage, understand how color choices affect users, and apply practical Tailwind, shadcn/ui, or CSS fixes faster.",
+  //   screenshots: [
+  //     "/images/projects/colorproof.png",
+  //     "/images/projects/colorproof.png",
+  //     "/images/projects/colorproof.png",
+  //   ],
+  //   links: {
+  //     live: "https://colorproof.vercel.app/",
+  //     github: "",
+  //   },
+  // },
   regretly: {
     title: "Regretly",
     overview:
@@ -600,9 +611,9 @@ export const projectCaseStudies = {
     result:
       "Users get a concrete view of what their screen time could represent and can share the result as a visual card.",
     screenshots: [
-      "/images/projects/regretly.png",
-      "/images/projects/regretly.png",
-      "/images/projects/regretly.png",
+      "/images/projects/regretly1.png",
+      "/images/projects/regretly2.png",
+      "/images/projects/regretly3.png",
     ],
     links: {
       live: "https://www.regretly.fun/",

@@ -20,7 +20,9 @@ const filters = [
 function ProjectCard({ project, index }: { project: Project; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref);
-  const hasImage = project.image && project.image !== "";
+  const imageSrc = project.images?.[0] ?? project.image;
+  const hasImage = !!imageSrc;
+  const multiImageCount = project.images?.length ?? 0;
   const initial = project.name.charAt(0).toUpperCase();
 
   return (
@@ -37,13 +39,20 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 
       <div className="relative w-full h-52 overflow-hidden bg-surface">
         {hasImage ? (
-          <Image
-            src={project.image!}
-            alt={project.name}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover group-hover:scale-105 transition-transform duration-500"
-          />
+          <>
+            <Image
+              src={imageSrc!}
+              alt={project.name}
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            {multiImageCount > 1 && (
+              <div className="absolute bottom-3 right-3 rounded-full bg-black/70 text-white text-[10px] uppercase tracking-[0.2em] px-2 py-1">
+                {multiImageCount} images
+              </div>
+            )}
+          </>
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-card to-surface">
             <span className="text-6xl font-bold text-muted-foreground/20 font-mono select-none">{initial}</span>
