@@ -193,6 +193,34 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    name: "SayThis",
+    description:
+      "SayThis is a guided conversation helper that gives ready-to-use lines for recruiter outreach, follow-ups, dry chats, apologies, client messages, and everyday awkward moments.",
+    positioning: "Conversation helper for copy-ready replies",
+    problem: "People often overthink what to say in professional, social, student, and freelance conversations, especially when a reply needs to sound natural fast.",
+    keyFeature: "Situation, tone, and goal-based suggestions with safe, confident, and friendly copy-ready options.",
+    stack: ["Next.js", "TypeScript", "Android APK", "Local-first"],
+    featureBullets: [
+      "15 real conversation situations",
+      "8 tone options",
+      "10 conversation goals",
+      "Copy-ready reply variants",
+      "Practice mode",
+    ],
+    trustDetails: ["Android APK", "Private by design", "Offline-friendly MVP"],
+    categories: ["Featured", "SaaS", "Frontend"],
+    tags: [
+      { name: "nextjs" },
+      { name: "typescript" },
+      { name: "android" },
+      { name: "product" },
+    ],
+    image: "/images/projects/saythis.png",
+    source_code_link: "",
+    live_link: "https://saythisapp.vercel.app/",
+    featured: true,
+  },
+  {
     name: "RoamApply",
     description:
       "RoamApply is a secure job search CRM for tracking global applications, recruiter outreach, follow-up dates, role notes, and search metrics in one private workspace.",
