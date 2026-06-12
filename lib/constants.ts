@@ -511,6 +511,15 @@ export const projects: Project[] = [
 
 export const certificates = [
   {
+    name: "Introduction to Software Product Management",
+    description:
+      "Comprehensive course on software product management, covering requirements management, Scrum, agile methodologies, and product strategy. Achieved 96.87% grade.",
+    tags: [{ name: "Product Management" }, { name: "Agile" }, { name: "University of Alberta" }],
+    image: "/images/certificates/Introduction to Software Product Management.png",
+    source_code_link:
+      "https://coursera.org/share/fe9c502d5c0fd3cfe6c2117a6f84896c",
+  },
+  {
     name: "Meta - Advanced React",
     description:
       "Covers advanced React patterns including hooks, context, performance optimization, and testing.",
