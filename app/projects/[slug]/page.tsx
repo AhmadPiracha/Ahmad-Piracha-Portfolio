@@ -27,6 +27,9 @@ export async function generateMetadata({ params }: PageProps) {
   return {
     title: `${study.title} Case Study | Ahmad Piracha`,
     description: study.overview,
+    alternates: {
+      canonical: `https://ahmadpiracha.vercel.app/projects/${slug}`,
+    },
   };
 }
 
@@ -40,8 +43,48 @@ export default async function ProjectCaseStudy({ params }: PageProps) {
 
   const project = projects.find((item) => item.caseStudySlug === slug);
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://ahmadpiracha.vercel.app",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: `${study.title} Case Study`,
+        item: `https://ahmadpiracha.vercel.app/projects/${slug}`,
+      },
+    ],
+  };
+
+  const projectSchema = {
+    "@context": "https://schema.org",
+    "@type": "Project",
+    name: study.title,
+    description: study.overview,
+    url: `https://ahmadpiracha.vercel.app/projects/${slug}`,
+    ...(study.links.live && { url: study.links.live }),
+  };
+
   return (
     <main className="min-h-screen bg-background text-foreground">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(projectSchema),
+        }}
+      />
       <div className="max-w-5xl mx-auto px-6 py-10 sm:py-14">
         <Link
           href="/#projects"

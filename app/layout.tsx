@@ -1,10 +1,17 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter, JetBrains_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import JsonLd from "@/components/json-ld"
 import './globals.css'
 
 const _inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const _jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains-mono" });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#0a0a0a",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://ahmadpiracha.vercel.app'),
@@ -38,6 +45,9 @@ export const metadata: Metadata = {
   icons: {
     icon: '/images/logo.svg',
   },
+  alternates: {
+    canonical: "https://ahmadpiracha.vercel.app",
+  },
 }
 
 export default function RootLayout({
@@ -48,6 +58,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-background">
       <body className={`${_inter.variable} ${_jetbrainsMono.variable} font-sans antialiased`}>
+        <JsonLd />
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

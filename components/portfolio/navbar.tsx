@@ -38,7 +38,7 @@ export default function Navbar() {
         >
           <Image
             src="/images/logo.svg"
-            alt="logo"
+            alt="Ahmad Piracha"
             width={32}
             height={32}
             className="w-8 h-8 object-contain"
