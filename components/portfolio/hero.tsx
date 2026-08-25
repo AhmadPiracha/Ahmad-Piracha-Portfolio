@@ -1,8 +1,7 @@
-"use client";
-
 import Image from "next/image";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { stats } from "@/lib/constants";
+import TrackedLink from "@/components/portfolio/tracked-link";
 
 const heroBadges = [
   "React",
@@ -55,54 +54,65 @@ export default function Hero() {
             </div>
 
             <div className="flex items-center gap-4 flex-wrap justify-center lg:justify-start">
-              <a
+              <TrackedLink
                 href="#projects"
+                eventName="projects_anchor_clicked"
                 className="px-6 py-3 bg-accent text-accent-foreground font-medium text-sm rounded-lg hover:bg-accent/90 transition-colors"
               >
                 View Projects
-              </a>
-              <a
+              </TrackedLink>
+              <TrackedLink
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
+                eventName="resume_downloaded"
+                eventProperties={{ location: "hero" }}
                 className="px-6 py-3 border border-card-border text-foreground font-medium text-sm rounded-lg hover:bg-card hover:border-muted-foreground/30 transition-colors"
               >
                 Download Resume
-              </a>
-              <a
+              </TrackedLink>
+              <TrackedLink
                 href="#contact"
+                eventName="contact_clicked"
+                eventProperties={{ method: "section", location: "hero" }}
                 className="px-2 py-3 text-muted hover:text-foreground font-medium text-sm transition-colors"
               >
                 Contact Me
-              </a>
+              </TrackedLink>
             </div>
 
             <div className="flex items-center gap-4 mt-10">
-              <a
+              <TrackedLink
                 href="https://github.com/AhmadPiracha"
                 target="_blank"
                 rel="noopener noreferrer"
+                eventName="github_clicked"
+                eventProperties={{ location: "hero" }}
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 aria-label="GitHub"
               >
-                <FaGithub size={20} />
-              </a>
-              <a
+                <Github size={20} />
+              </TrackedLink>
+              <TrackedLink
                 href="https://www.linkedin.com/in/ahmad-waseem-piracha/"
                 target="_blank"
                 rel="noopener noreferrer"
+                eventName="linkedin_clicked"
+                eventProperties={{ location: "hero" }}
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 aria-label="LinkedIn"
               >
-                <FaLinkedin size={20} />
-              </a>
-              <a
+                <Linkedin size={20} />
+              </TrackedLink>
+              <TrackedLink
                 href="mailto:ahmadpiracha3@gmail.com"
+                eventName="contact_clicked"
+                eventProperties={{ method: "email", location: "hero" }}
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 aria-label="Email"
               >
-                <FaEnvelope size={20} />
-              </a>
+                <Mail size={20} />
+              </TrackedLink>
               <div className="w-px h-4 bg-card-border mx-2" />
               <span className="text-xs text-muted-foreground font-mono">
                 Islamabad, PK
@@ -121,6 +131,8 @@ export default function Hero() {
                   width={320}
                   height={320}
                   priority
+                  fetchPriority="high"
+                  sizes="(max-width: 640px) 256px, (max-width: 1024px) 288px, 320px"
                 />
               </div>
             </div>

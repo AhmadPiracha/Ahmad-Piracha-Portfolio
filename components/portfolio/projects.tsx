@@ -2,9 +2,10 @@
 
 import { useState, useRef } from "react";
 import Image from "next/image";
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { ExternalLink, Github } from "lucide-react";
 import { useInView } from "@/hooks/use-in-view";
 import { projects, type Project } from "@/lib/constants";
+import TrackedLink from "@/components/portfolio/tracked-link";
 
 const filters = [
   "All",
@@ -61,14 +62,14 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 
         <div className="absolute inset-0 bg-background/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 flex items-center justify-center gap-3 transition-all duration-300">
           {project.live_link && (
-            <a href={project.live_link} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${project.name}`} className="w-11 h-11 rounded-full bg-accent text-accent-foreground flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
-              <FaExternalLinkAlt size={14} />
-            </a>
+            <TrackedLink href={project.live_link} target="_blank" rel="noopener noreferrer" eventName="live_demo_opened" eventProperties={{ project: project.name, location: "project_image" }} aria-label={`Visit ${project.name}`} className="w-11 h-11 rounded-full bg-accent text-accent-foreground flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
+              <ExternalLink size={14} />
+            </TrackedLink>
           )}
           {project.source_code_link && (
-            <a href={project.source_code_link} target="_blank" rel="noopener noreferrer" aria-label={`Source code for ${project.name}`} className="w-11 h-11 rounded-full bg-foreground text-background flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
-              <FaGithub size={16} />
-            </a>
+            <TrackedLink href={project.source_code_link} target="_blank" rel="noopener noreferrer" eventName="github_clicked" eventProperties={{ project: project.name, location: "project_image" }} aria-label={`Source code for ${project.name}`} className="w-11 h-11 rounded-full bg-foreground text-background flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
+              <Github size={16} />
+            </TrackedLink>
           )}
         </div>
       </div>
@@ -115,19 +116,19 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 
         <div className="mt-5 flex flex-wrap gap-2">
           {project.live_link && (
-            <a href={project.live_link} target="_blank" rel="noopener noreferrer" className="px-3 py-2 rounded-md bg-accent text-accent-foreground text-xs font-medium hover:bg-accent/90 transition-colors">
+            <TrackedLink href={project.live_link} target="_blank" rel="noopener noreferrer" eventName="live_demo_opened" eventProperties={{ project: project.name, location: "project_card" }} className="px-3 py-2 rounded-md bg-accent text-accent-foreground text-xs font-medium hover:bg-accent/90 transition-colors">
               Live Demo
-            </a>
+            </TrackedLink>
           )}
           {project.caseStudySlug && (
-            <a href={`/projects/${project.caseStudySlug}`} className="px-3 py-2 rounded-md border border-card-border text-foreground text-xs font-medium hover:bg-surface transition-colors">
+            <TrackedLink href={`/projects/${project.caseStudySlug}`} eventName="case_study_opened" eventProperties={{ project: project.name }} className="px-3 py-2 rounded-md border border-card-border text-foreground text-xs font-medium hover:bg-surface transition-colors">
               Case Study
-            </a>
+            </TrackedLink>
           )}
           {project.source_code_link && (
-            <a href={project.source_code_link} target="_blank" rel="noopener noreferrer" className="px-3 py-2 rounded-md border border-card-border text-muted text-xs font-medium hover:text-foreground hover:bg-surface transition-colors">
+            <TrackedLink href={project.source_code_link} target="_blank" rel="noopener noreferrer" eventName="github_clicked" eventProperties={{ project: project.name, location: "project_card" }} className="px-3 py-2 rounded-md border border-card-border text-muted text-xs font-medium hover:text-foreground hover:bg-surface transition-colors">
               GitHub
-            </a>
+            </TrackedLink>
           )}
         </div>
       </div>

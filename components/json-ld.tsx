@@ -1,10 +1,12 @@
 export default function JsonLd() {
+  const siteUrl = "https://ahmadpiracha.online";
+
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Ahmad Piracha",
-    url: "https://ahmadpiracha.vercel.app",
-    image: "https://ahmadpiracha.vercel.app/og-image.png",
+    url: siteUrl,
+    image: `${siteUrl}/og-image.png`,
     sameAs: [
       "https://github.com/AhmadPiracha",
       "https://www.linkedin.com/in/ahmad-waseem-piracha/",
@@ -31,7 +33,7 @@ export default function JsonLd() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Ahmad Piracha",
-    url: "https://ahmadpiracha.vercel.app",
+    url: siteUrl,
     description:
       "Frontend/Product Engineer building SaaS tools, developer utilities, Chrome extensions, and polished web apps.",
     author: {

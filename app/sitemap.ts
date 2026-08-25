@@ -9,7 +9,7 @@ const caseStudySlugs = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://ahmadpiracha.vercel.app";
+  const baseUrl = "https://ahmadpiracha.online";
 
   const staticPages: MetadataRoute.Sitemap = [
     {

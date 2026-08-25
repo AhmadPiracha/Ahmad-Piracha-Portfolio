@@ -511,6 +511,14 @@ export const projects: Project[] = [
 
 export const certificates = [
   {
+    name: "Software Processes and Agile Practices",
+    description:
+      "University of Alberta course on software process models, Agile development, Scrum, Kanban, and software development life cycle practices.",
+    tags: [{ name: "Agile" }, { name: "Scrum" }, { name: "University of Alberta" }],
+    image: "/images/certificates/Software Process and Agile Practices.png",
+    source_code_link: "https://coursera.org/share/016bad461ca4992074d0cb3b7adb5d43",
+  },
+  {
     name: "Introduction to Software Product Management",
     description:
       "Comprehensive course on software product management, covering requirements management, Scrum, agile methodologies, and product strategy. Achieved 96.87% grade.",
