@@ -1,4 +1,5 @@
-import { FaEnvelope, FaFileAlt, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FileText, Github, Linkedin, Mail } from "lucide-react";
+import TrackedLink from "@/components/portfolio/tracked-link";
 
 export default function Footer() {
   return (
@@ -14,40 +15,48 @@ export default function Footer() {
         </div>
 
         <div className="flex items-center gap-4">
-          <a
+          <TrackedLink
             href="https://github.com/AhmadPiracha"
             target="_blank"
             rel="noopener noreferrer"
+            eventName="github_clicked"
+            eventProperties={{ location: "footer" }}
             className="text-muted-foreground hover:text-foreground transition-colors"
             aria-label="GitHub"
           >
-            <FaGithub size={16} />
-          </a>
-          <a
+            <Github size={16} />
+          </TrackedLink>
+          <TrackedLink
             href="https://www.linkedin.com/in/ahmad-waseem-piracha/"
             target="_blank"
             rel="noopener noreferrer"
+            eventName="linkedin_clicked"
+            eventProperties={{ location: "footer" }}
             className="text-muted-foreground hover:text-foreground transition-colors"
             aria-label="LinkedIn"
           >
-            <FaLinkedin size={16} />
-          </a>
-          <a
+            <Linkedin size={16} />
+          </TrackedLink>
+          <TrackedLink
             href="mailto:ahmadpiracha3@gmail.com"
+            eventName="contact_clicked"
+            eventProperties={{ method: "email", location: "footer" }}
             className="text-muted-foreground hover:text-foreground transition-colors"
             aria-label="Email"
           >
-            <FaEnvelope size={16} />
-          </a>
-          <a
+            <Mail size={16} />
+          </TrackedLink>
+          <TrackedLink
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
+            eventName="resume_downloaded"
+            eventProperties={{ location: "footer" }}
             className="text-muted-foreground hover:text-foreground transition-colors"
             aria-label="Resume"
           >
-            <FaFileAlt size={16} />
-          </a>
+            <FileText size={16} />
+          </TrackedLink>
         </div>
       </div>
     </footer>

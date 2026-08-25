@@ -5,6 +5,8 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import JsonLd from "@/components/json-ld"
 import './globals.css'
 
+const siteUrl = 'https://ahmadpiracha.online'
+
 const _inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const _jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains-mono" });
 
@@ -15,7 +17,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ahmadpiracha.vercel.app'),
+  metadataBase: new URL(siteUrl),
   title: 'Ahmad Piracha - Frontend & Product Engineer',
   description:
     'Frontend/Product Engineer building SaaS tools, developer utilities, Chrome extensions, and polished web apps with React, Next.js, and TypeScript.',
@@ -23,7 +25,7 @@ export const metadata: Metadata = {
     title: 'Ahmad Piracha - Frontend & Product Engineer',
     description:
       'I build polished SaaS tools, developer utilities, and launch-ready web apps using React, Next.js, TypeScript, and modern UI systems.',
-    url: 'https://ahmadpiracha.vercel.app',
+    url: siteUrl,
     siteName: 'Ahmad Piracha',
     images: [
       {
@@ -47,7 +49,7 @@ export const metadata: Metadata = {
     icon: '/images/logo.svg',
   },
   alternates: {
-    canonical: "https://ahmadpiracha.vercel.app",
+    canonical: siteUrl,
   },
 }
 

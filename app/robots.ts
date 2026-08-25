@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://ahmadpiracha.vercel.app/sitemap.xml",
+    sitemap: "https://ahmadpiracha.online/sitemap.xml",
   };
 }

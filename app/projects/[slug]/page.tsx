@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ExternalLink, Github } from "lucide-react";
 import { projectCaseStudies, projects } from "@/lib/constants";
 
+const siteUrl = "https://ahmadpiracha.online";
+
 type CaseStudySlug = keyof typeof projectCaseStudies;
 
 interface PageProps {
@@ -28,7 +30,7 @@ export async function generateMetadata({ params }: PageProps) {
     title: `${study.title} Case Study | Ahmad Piracha`,
     description: study.overview,
     alternates: {
-      canonical: `https://ahmadpiracha.vercel.app/projects/${slug}`,
+      canonical: `${siteUrl}/projects/${slug}`,
     },
   };
 }
@@ -51,13 +53,13 @@ export default async function ProjectCaseStudy({ params }: PageProps) {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://ahmadpiracha.vercel.app",
+        item: siteUrl,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: `${study.title} Case Study`,
-        item: `https://ahmadpiracha.vercel.app/projects/${slug}`,
+        item: `${siteUrl}/projects/${slug}`,
       },
     ],
   };
@@ -67,8 +69,8 @@ export default async function ProjectCaseStudy({ params }: PageProps) {
     "@type": "Project",
     name: study.title,
     description: study.overview,
-    url: `https://ahmadpiracha.vercel.app/projects/${slug}`,
-    ...(study.links.live && { url: study.links.live }),
+    url: `${siteUrl}/projects/${slug}`,
+    ...(study.links.live && { sameAs: study.links.live }),
   };
 
   return (

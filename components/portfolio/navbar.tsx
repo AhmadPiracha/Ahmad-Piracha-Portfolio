@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { navLinks } from "@/lib/constants";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { X, Menu } from "lucide-react";
+import { Github, Linkedin, X, Menu } from "lucide-react";
+import TrackedLink from "@/components/portfolio/tracked-link";
 
 export default function Navbar() {
   const [active, setActive] = useState("");
@@ -64,24 +64,28 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden md:flex items-center gap-3">
-          <a
+          <TrackedLink
             href="https://github.com/AhmadPiracha"
             target="_blank"
             rel="noopener noreferrer"
+            eventName="github_clicked"
+            eventProperties={{ location: "navbar" }}
             className="text-muted hover:text-foreground transition-colors"
             aria-label="GitHub"
           >
-            <FaGithub size={18} />
-          </a>
-          <a
+            <Github size={18} />
+          </TrackedLink>
+          <TrackedLink
             href="https://www.linkedin.com/in/ahmad-waseem-piracha/"
             target="_blank"
             rel="noopener noreferrer"
+            eventName="linkedin_clicked"
+            eventProperties={{ location: "navbar" }}
             className="text-muted hover:text-foreground transition-colors"
             aria-label="LinkedIn"
           >
-            <FaLinkedin size={18} />
-          </a>
+            <Linkedin size={18} />
+          </TrackedLink>
         </div>
 
         <button
@@ -132,24 +136,28 @@ export default function Navbar() {
         </div>
 
         <div className="px-8 pb-8 flex gap-4 border-t border-card-border pt-6">
-          <a
+          <TrackedLink
             href="https://github.com/AhmadPiracha"
             target="_blank"
             rel="noopener noreferrer"
+            eventName="github_clicked"
+            eventProperties={{ location: "mobile_nav" }}
             className="text-muted hover:text-foreground transition-colors"
             aria-label="GitHub"
           >
-            <FaGithub size={20} />
-          </a>
-          <a
+            <Github size={20} />
+          </TrackedLink>
+          <TrackedLink
             href="https://www.linkedin.com/in/ahmad-waseem-piracha/"
             target="_blank"
             rel="noopener noreferrer"
+            eventName="linkedin_clicked"
+            eventProperties={{ location: "mobile_nav" }}
             className="text-muted hover:text-foreground transition-colors"
             aria-label="LinkedIn"
           >
-            <FaLinkedin size={20} />
-          </a>
+            <Linkedin size={20} />
+          </TrackedLink>
         </div>
       </div>
     </nav>
