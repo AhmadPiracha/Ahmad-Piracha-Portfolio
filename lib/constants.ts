@@ -183,7 +183,7 @@ export const projects: Project[] = [
       { name: "prisma" },
       { name: "nextauth" },
     ],
-    image: '/images/projects/RsvpDarbar.png',
+    image: "/images/projects/rsvpdarbar.png",
     source_code_link: "",
     live_link: "https://rsvpdarbar.ahmadpiracha.online/",
     featured: true,
