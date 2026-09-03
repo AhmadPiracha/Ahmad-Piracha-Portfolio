@@ -161,26 +161,28 @@ export default async function ProjectCaseStudy({ params }: PageProps) {
             <CaseSection title="Challenges" body={study.challenges} />
             <CaseSection title="Result" body={study.result} />
 
-            <section>
-              <h2 className="text-2xl font-semibold text-foreground">
-                Screenshots
-              </h2>
-              <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {study.screenshots.map((screenshot, index) => (
-                  <div
-                    key={`${screenshot}-${index}`}
-                    className="relative aspect-[16/10] overflow-hidden rounded-xl border border-card-border bg-card"
-                  >
-                    <Image
-                      src={screenshot}
-                      alt={`${study.title} screenshot ${index + 1}`}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
-            </section>
+            {study.screenshots.length > 0 && (
+              <section>
+                <h2 className="text-2xl font-semibold text-foreground">
+                  Screenshots
+                </h2>
+                <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {study.screenshots.map((screenshot, index) => (
+                    <div
+                      key={`${screenshot}-${index}`}
+                      className="relative aspect-[16/10] overflow-hidden rounded-xl border border-card-border bg-card"
+                    >
+                      <Image
+                        src={screenshot}
+                        alt={`${study.title} screenshot ${index + 1}`}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
           </article>
 
           <aside className="lg:sticky lg:top-24 h-fit rounded-xl border border-card-border bg-card p-5">

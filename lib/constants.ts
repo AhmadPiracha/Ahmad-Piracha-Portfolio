@@ -159,6 +159,36 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    name: "RsvpDarbar",
+    description:
+      "RsvpDarbar is a WhatsApp-first event confirmation platform for weddings, family events, religious gatherings, and community events, helping organizers know exactly who is coming.",
+    positioning: "WhatsApp-first RSVP and event confirmation platform",
+    problem: "Event organizers often manage guest confirmations across scattered chats, phone calls, spreadsheets, and follow-ups without a reliable final guest list.",
+    keyFeature: "Personalized RSVP links, guest tracking, WhatsApp-ready messages, follow-ups, and CSV import/export.",
+    stack: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "NextAuth"],
+    featureBullets: [
+      "Secure public RSVP links",
+      "Guest and family records",
+      "CSV import and export",
+      "Role-based workspaces",
+      "Follow-up and call tracking",
+    ],
+    trustDetails: ["Production deployed", "Role-based access", "Audit history"],
+    categories: ["Featured", "SaaS", "Frontend", "Full Stack"],
+    caseStudySlug: "rsvpdarbar",
+    tags: [
+      { name: "nextjs" },
+      { name: "typescript" },
+      { name: "postgresql" },
+      { name: "prisma" },
+      { name: "nextauth" },
+    ],
+    image: '/images/projects/RsvpDarbar.png',
+    source_code_link: "",
+    live_link: "https://rsvpdarbar.ahmadpiracha.online/",
+    featured: true,
+  },
+  {
     name: "LeakShot",
     description:
       "LeakShot is a local-first screenshot privacy scanner that detects sensitive text, highlights risky areas, and lets users export a clean redacted image without uploading anything to a server.",
@@ -598,6 +628,36 @@ export const currentlyBuilding = [
 ];
 
 export const projectCaseStudies = {
+  rsvpdarbar: {
+    title: "RsvpDarbar",
+    overview:
+      "RsvpDarbar is a WhatsApp-first event confirmation platform for weddings, family events, religious gatherings, and community events. It helps organizers move from scattered confirmations to a clear answer: exactly who is coming.",
+    problem:
+      "Large family and community events often depend on WhatsApp messages, phone calls, spreadsheets, and manual follow-ups. Without a dedicated system, organizers can lose track of confirmed guests, uncertain responses, transport needs, accommodation needs, and the final count.",
+    solution:
+      "RsvpDarbar gives organizers workspaces, events, guest records, secure public RSVP links, WhatsApp-ready messages, call outcomes, follow-up tasks, and exports so the guest list stays current from invitation to final planning.",
+    features: [
+      "Workspace roles for owners, admins, coordinators, and viewers",
+      "Multiple events with guest and family records",
+      "CSV import with validation, duplicate handling, and CSV export",
+      "Secure guest-specific RSVP links without guest accounts",
+      "Response tracking for confirmed, declined, maybe, and needs-contact states",
+      "Transport, accommodation, follow-up, call outcome, and audit history tracking",
+    ],
+    technical:
+      "The MVP is built with Next.js, React, TypeScript, PostgreSQL, Prisma ORM, NextAuth credentials authentication, bcrypt password hashing, Tailwind CSS, project CSS tokens, Vitest tests, and Vercel-compatible deployment.",
+    ux:
+      "The workflow is designed around the way organizers already communicate: create an event, import guests, generate a personalized RSVP link or WhatsApp-ready message, log manual shares or phone-call responses, and keep follow-ups visible.",
+    challenges:
+      "The main challenge is supporting real event complexity while keeping the MVP focused. Automatic WhatsApp sending, payments, seating charts, vendor management, native mobile apps, and social features are intentionally deferred.",
+    result:
+      "Organizers can manage guest confirmations, track attendance needs, coordinate team access, and export a reliable final guest list without forcing guests to create accounts.",
+    screenshots: [],
+    links: {
+      live: "https://rsvpdarbar.ahmadpiracha.online/",
+      github: "",
+    },
+  },
   leakshot: {
     title: "LeakShot",
     overview:

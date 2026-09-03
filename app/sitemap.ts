@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 
 const caseStudySlugs = [
+  "rsvpdarbar",
   "leakshot",
   "colorproof",
   "roamapply",
